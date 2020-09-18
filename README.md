@@ -1,5 +1,5 @@
 # ff
-Fast Framework. A javascript basic framework made by me.
+Fast Framework. A javascript basic framework [Working live here](http://fastframework.ga)
 
 ## What is this?
 This is a small .js file what allows you to use some basic features in your web page/app.  
