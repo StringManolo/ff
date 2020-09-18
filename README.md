@@ -2,7 +2,7 @@
 Fast Framework. A javascript basic framework made by me.
 
 ## How to use.
-You only need download the ff.js file or use this link [http://fastframework.ga/ff.js](http://fastframework.ga.js)  
+You only need download the ff.js file or use this link [http://fastframework.ga/ff.js](http://fastframework.ga/ff.js)  
 The index.html is an example of how you can use the available features.
 Live here [http://fastframework.ga](http://fastframework.ga)
 
