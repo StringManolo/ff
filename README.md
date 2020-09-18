@@ -5,8 +5,8 @@ Fast Framework. A javascript basic framework made by me.
 This is a small .js file what allows you to use some basic features in your web page/app.  
 +  There is a router intended to make SinglePageApplications.  
 +  Basic mustache sintax to replace {{ myVariable }} by text or {{{ myVariable }}} by html code.  
-+  Custom tags like <myTag></myTag> can be used in the html and will be filled with the content of a property/variable.  
-+  Kebab sintax like <my-tag></my-tag> will be filled by the contents of a text file named mytag.ff
++  Custom tags like ```<myTag></myTag>``` can be used in the html and will be filled with the content of a property/variable.  
++  Kebab sintax like ```<my-tag></my-tag>``` will be filled by the contents of a text file named mytag.ff
 +  Some shortcuts like $() to use querySelector or ael() to use addEventListener.
 Check the index.html for mores examples of usage. 
 
