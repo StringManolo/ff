@@ -112,7 +112,7 @@ ff.router.start();```
   Example:  
   ```ff.mustache.date = new Date();  
   ff.mustache.myNick = "StringManolo";
-  ff.mustache.myHeader = `<h1>FastFramework made by $(ff.mustache.myNick)</h1>`;
+  ff.mustache.myHeader = "<h1>FastFramework</h1>"
 
   /* replace the mustaches by the values */
   ff.getMustacheSintax();
