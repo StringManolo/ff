@@ -13,12 +13,13 @@ This proyect is also hosted at Netlify and accesible here https://fastframework.
   Code to replace ```<my-custom></my-custom>``` tags.
 
 ### Install
-Create a html file.
-  Link your main.js file  
+Create a html file.  
+  Link your main.js file.  
   Import the ff module from your main.js file.  
-
+  
   index.html  
-  ```<!DOCTYPE html>
+  ```
+  <!DOCTYPE html>
   <html>
     <head>
       <meta charset="utf-8">
@@ -30,7 +31,7 @@ Create a html file.
 
       <script type="module" src="main.js"></script>
     </body>
-  </html>```  
+  </html>```
   
   main.js  
   ```import ff from "https://fastframework.ga/ff.js";
