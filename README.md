@@ -1,28 +1,160 @@
-# ff
-Fast Framework. A javascript basic framework [Working live here](http://fastframework.ga)
+# FastFramework
+Small (250 lines of code) javascript framework library to provide you with some handfull features in an easy way.  
+This proyect is also hosted at Netlify and accesible here https://fastframework.ga/ff.js
 
-## What is this?
-This is a small .js file what allows you to use some basic features in your web page/app.  
-+  There is a router intended to make SinglePageApplications.  
-+  Basic mustache sintax to replace {{ myVariable }} by text or {{{ myVariable }}} by html code.  
-+  Custom tags like ```<myTag></myTag>``` can be used in the html and will be filled with the content of a property/variable.  
-+  Kebab sintax like ```<my-tag></my-tag>``` will be filled by the contents of a text file named mytag.ff
-+  Some shortcuts like $() to use querySelector or ael() to use addEventListener.
-Check the index.html for mores examples of usage. 
+### Files Structure
++ ff.js  
+  Framework code.  
++ index.html  
+  Test file.
++ main.js  
+  Test file/Example of usage.
++ mycustom.ff  
+  Code to replace ```<my-custom></my-custom>``` tags.
 
-## What is this good for?  
-Is good for basic and small webpages what makes no sense to include big frameworks/libraries when you only need some basic features.  
-Or to have some organized templates/components in files and test them easily without a full featured framework.  
-Build your own framework from a small base.
+### Install
+Create a html file.
+  Link your main.js file  
+  Import the ff module from your main.js file.  
 
-## How to use.
-You only need download the ff.js file or use this link [http://fastframework.ga/ff.js](http://fastframework.ga/ff.js)  
-The index.html is an example of how you can use the available features.
-Live here [http://fastframework.ga](http://fastframework.ga)
+  index.html  
+  ```<!DOCTYPE html>
+  <html>
+    <head>
+      <meta charset="utf-8">
+        <title>My WebPage</title>
+    </head>
+    <body>
+  
+      {{ date }}
 
-#### Project is new.
-You should minify to improve download time and host in CDN or alike to load the code from cache. 
-You don't need to since the framework/library is really small. Be carefull of bugs and incompatibility. If you find any problems or sugestions please report them. You can do it directly using telegram @stringmanolo
+      <script type="module" src="main.js"></script>
+    </body>
+  </html>```  
+  
+  main.js  
+  ```import ff from "https://fastframework.ga/ff.js";
+  /* Define the mustache value */
+  ff.mustache.date = new Date();
 
-#### The minified version seems to work but didn't test it.
-If you need more speed, manually minify it. I'm not doing it yet since i may add lot of features or changes.
+  /* replace the mustaches by the values */
+  ff.getMustacheSintax();```
+  
+# Methods 
+  ### ff.activateShortcuts();  
+  Activate the default shortcut aliases:
+  + $(selector);  
+  Alias for document.querySelector(selector);  
+  Example:  
+  ```$("#myDiv");```
+  
+  + $$(selector);  
+  Alias for document.querySelectorAll(selector);  
+  Example:  
+  ```$$(".myDivs");```  
+  
+  + ael( element, event, callback );  
+  Wraper around addEventListener.
+  Example:  
+  ```ael( $("myDiv"), "click", function() {
+     alert("You clicked my div.");
+   });```
+
+  *The aliases are window global properties.*
+
+  ### ff.defineShortcut(alias, target);
+  Create a new alias.  
+  Example:  
+  ```ff.defineShortcut("_", alert);
+  _("Hello");```  
+  
+  ### ff.router.start();
+  Activate the router. Routes need to be declared before call this method. Example:  
+  ```ff.routes = {
+  route1: {
+    name: "home",
+    action: function() {
+      alert("Home");
+    }
+  },
+
+  route2: {
+    name: "example",
+    action: function() {
+      alert("Example");
+    }
+  },
+
+  amount: 2,
+
+  routeDefault: {
+    name: "default",
+    action: function() {
+      alert("Default");
+    }
+  }
+};
+
+ff.router.start();```  
+  Is mandatory to name the ff.routes properties as route1, route2, route3...  
+
+  Is also mandatory to declare the amount property asigning the number of routes (routeDefault not included).  
+
+  ```name``` property indicates the route; home equals to https://example.com/#home  
+
+  ```action``` property is the method called when you navigate to the name route. You can modify innerHTML from elements or anything you want to do.
+
+  routeDefault action property is called when you use a # route not defined as route in the ff.routes object.
+
+  ### ff.mustache
+  You declare your properties under the mustache object.  
+  Example:  
+  ```ff.mustache.date = new Date();  
+  ff.mustache.myNick = "StringManolo";
+  ff.mustache.myHeader = `<h1>FastFramework made by $(ff.mustache.myNick)</h1>`;
+
+  /* replace the mustaches by the values */
+  ff.getMustacheSintax();
+  ```  
+  You can use {{ myHeader }} to show as text or {{{ myHeader }}} to show as html.  
+  Notice the method ```ff.getMustacheSintax();``` being called to replace the the mustache sintax from all the document to corresponding values.
+
+  ### ff.getUnknownTags();
+  Find all the html tags under the pattern ```<tag></tag>``` being ```tag``` a not already existing tag in the parser of your browser. Recomended to prepend ```my``` to make sure the tag does not exist. Example:  
+  ```ff.customTags = {
+	myMenu:`<section><article id="mainMenu"><a href="#home">HOME</a>
+<a href="#example">EXAMPLE</a>
+<a href="#updates">UPDATES</a>
+<a href="#about">ABOUT</a></article></section>`
+};
+
+/* replace the unknown tags by the templates */
+ff.getUnknownTags();```
+
+  ### ff.getCustomTags();
+  Find all the html tags under the pattern ```<custom-tag></cutom-tag>``` being ```custom-tag``` 2 keywords separated by a guion. The guion is removed, becarefull about that because ```<hellofrom-here>``` and ```<hello-fromhere>``` are referencing the same file after the guion is removed.
+  This tags will be filled with the content of a file named sema as tag and ending by .ff  
+  Example:  
+  index.html
+  ```
+  ...
+  <body>
+  <my-text></my-text>
+  <script type="module" src="main.js"></script>
+  ...
+  ```  
+  main.js
+  ```
+  import ff from "https://fastframework.ga/ff";
+  ff.getCustomTags();
+  ...
+  ```
+  mytext.ff
+  ```
+  This text will be included inside index.html.
+  This <b>also</b> let me use html.
+  ```
+
+### Extra
+  If you find bugs, issues, bad practices or anything you wwant to ask me, include... Feel free to send me a telegram message @stringmanolo  
+
