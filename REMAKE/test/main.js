@@ -1,5 +1,5 @@
 /* Import the ff object from the ffr.js file */
-import ff from "https://fastframework.ga/ffr.js";
+import ff from "https://fastframework.ga/REMAKE/ffr.js";
 
 /* Activate the default shortcut aliases:
  * $("#myDiv");
