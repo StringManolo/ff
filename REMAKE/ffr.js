@@ -90,6 +90,7 @@ ff.router.start = function() {
 
 
 /* Mustache Sintax */
+ff.mustache = {};
 ff.getMustacheSintax = function() {
 
     function htmlEntities(string) {
@@ -135,20 +136,65 @@ ff.getMustacheSintax = function() {
     for(var i = 0; i < mustache.length; ++i) {
       var aux = tokenizer(mustache[i]);
       
-      if (ff[aux[1]]) {
+      if (ff.mustache[aux[1]]) {
 	if (aux[0].length > 2) {
 	  var tmpReg = new RegExp("{{{\\s*" + aux[1] + "\\s*}}}", "");
-	  all.innerHTML = all.innerHTML.replace(tmpReg, ff[aux[1]]);
+	  all.innerHTML = all.innerHTML.replace(tmpReg, ff.mustache[aux[1]]);
         
 	} else {
           var tmpReg = new RegExp("{{\\s*" + aux[1] + "\\s*}}", "");
-	  all.innerHTML = all.innerHTML.replace(tmpReg, htmlEntities(ff[aux[1]]));
+	  all.innerHTML = all.innerHTML.replace(tmpReg, htmlEntities(ff.mustache[aux[1]]));
 	}
       }
     }
   }
 
 /* End Mustache Sintax ***/
+
+
+
+
+
+
+/*** Unknown Tags Code */
+ff.getUnknownTags = function() {
+alert("gut called");
+
+  var unknownTags = {};
+  ff._getUnknownTags = function() {
+alert("_gut called");
+
+    var all = document.querySelectorAll("*");
+    for(var i = 0; i < all.length; ++i) {
+      if(/unknown/gim.test(all[i])) {
+        var elementName = all[i].outerHTML.substr(1, all[i].outerHTML.indexOf(">")-1);
+        unknownTags[elementName+""] = all[i];
+      }
+    }
+
+    var userTemplates = Object.keys(ff.customTags);
+    var userTags = Object.keys(unknownTags);
+    for(var i = 0; i < userTags.length; ++i) { 
+      for(var j = 0; j < userTemplates.length; ++j) {
+	if (userTags[i].toUpperCase() == userTemplates[j].toUpperCase()) {
+	  var docTags = document.querySelectorAll(userTags[i]);
+	  for(var k = 0; k < docTags.length; ++k) {
+	    if(/<!--preserveInner-->/.test(ff.customTags[userTemplates[j]])) {
+              var inner = docTags[k].innerHTML;
+	      docTags[k].innerHTML = ff.customTags[userTemplates[j]].replace(/<!--preserveInner-->/, inner);
+	    } else {
+              docTags[k].innerHTML = ff.customTags[userTemplates[j]];
+	    }
+	  }
+	}
+      }
+    }
+  }
+  ff._getUnknownTags();
+}
+/* End Unknown Tags Code ***/
+
+
 
 
 

@@ -18,7 +18,7 @@ import ff from "./ffr.js";
   _($("body").innerHTML);
 
 
-
+/* My routes */
 ff.routes = {
   route1: {
     name: "home",
@@ -44,7 +44,23 @@ ff.routes = {
   }
 };
 
+/* Make router start */
 ff.router.start();
 
-ff.date = new Date();
+/* Define the mustache value */
+ff.mustache.date = new Date();
+
+/* replace the mustaches by the values */
 ff.getMustacheSintax();
+
+/* Define the <myMenu></myMenu> tag inner content */
+ff.customTags = {
+	myMenu:`<section><article id="mainMenu"><a href="#home">HOME</a>
+<a href="#example">EXAMPLE</a>
+<a href="#updates">UPDATES</a>
+<a href="#about">ABOUT</a></article></section>`
+};
+
+/* replace the unknown tags by the templates */
+ff.getUnknownTags();
+
