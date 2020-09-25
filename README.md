@@ -31,7 +31,8 @@ Create a html file.
 
       <script type="module" src="main.js"></script>
     </body>
-  </html>```
+  </html>
+  ```
   
   main.js  
   ```import ff from "https://fastframework.ga/ff.js";
@@ -39,7 +40,8 @@ Create a html file.
   ff.mustache.date = new Date();
 
   /* replace the mustaches by the values */
-  ff.getMustacheSintax();```
+  ff.getMustacheSintax();
+  ```
   
 # Methods 
   ### ff.activateShortcuts();  
@@ -59,7 +61,8 @@ Create a html file.
   Example:  
   ```ael( $("myDiv"), "click", function() {
      alert("You clicked my div.");
-   });```
+   });
+   ```
 
   *The aliases are window global properties.*
 
@@ -67,7 +70,8 @@ Create a html file.
   Create a new alias.  
   Example:  
   ```ff.defineShortcut("_", alert);
-  _("Hello");```  
+  _("Hello");
+  ```  
   
   ### ff.router.start();
   Activate the router. Routes need to be declared before call this method. Example:  
@@ -96,7 +100,8 @@ Create a html file.
   }
 };
 
-ff.router.start();```  
+ff.router.start();
+```  
   Is mandatory to name the ff.routes properties as route1, route2, route3...  
 
   Is also mandatory to declare the amount property asigning the number of routes (routeDefault not included).  
@@ -130,7 +135,8 @@ ff.router.start();```
 };
 
 /* replace the unknown tags by the templates */
-ff.getUnknownTags();```
+ff.getUnknownTags();
+```
 
   ### ff.getCustomTags();
   Find all the html tags under the pattern ```<custom-tag></cutom-tag>``` being ```custom-tag``` 2 keywords separated by a guion. The guion is removed, becarefull about that because ```<hellofrom-here>``` and ```<hello-fromhere>``` are referencing the same file after the guion is removed.
