@@ -195,6 +195,52 @@ alert("_gut called");
 /* End Unknown Tags Code ***/
 
 
+/*** Utils Code */
+ff._GET = function(url, callback) {
+  var peticion = new XMLHttpRequest();
+  peticion.open("GET", url , true);
+  peticion.send();
+  peticion.onreadystatechange = function() {
+    if (peticion.readyState == 4) {
+      if (peticion.status == 0 || peticion.status == 200) {
+        callback(peticion.responseText);
+      }
+    }
+  }      
+}
+/* End Utils Code ***/
+
+
+/*** Custom Tags Code */
+ff.getUnknownTags = function() {
+
+  var customTags = {};
+  ff._getCustomTags = function() {
+    var all = document.querySelectorAll("*");
+    for(var i = 0; i < all.length; ++i) {
+      if(/object\ htmlelement/gim.test(all[i])) {
+        var elementName = all[i].outerHTML.substr(1, all[i].outerHTML.indexOf(">")-1);
+	if(/\-/.test(elementName)) {
+          customTags[elementName+""] = all[i];
+	}
+      }
+    }
+  }
+  ff._getCustomTags();
+
+  var userTags = Object.keys(customTags);
+  userTags.forEach(function(element) {
+    ff._GET("./"+element.replace("-","")+".ff", function(resp) {
+      var currentTag = document.querySelectorAll(element);
+      for(var i = 0; i < currentTag.length; ++i) {
+        currentTag[i].innerHTML = resp;
+	getMustacheSintax();
+      }
+    });
+  });
+}
+/* End Custom Tags Code ***/
+
 
 
 

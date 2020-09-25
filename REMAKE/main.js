@@ -64,3 +64,5 @@ ff.customTags = {
 /* replace the unknown tags by the templates */
 ff.getUnknownTags();
 
+/* replace the custom tags by a server .ff file */
+ff.getCustomTags();
