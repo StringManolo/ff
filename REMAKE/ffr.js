@@ -158,12 +158,8 @@ ff.getMustacheSintax = function() {
 
 /*** Unknown Tags Code */
 ff.getUnknownTags = function() {
-alert("gut called");
-
   var unknownTags = {};
   ff._getUnknownTags = function() {
-alert("_gut called");
-
     var all = document.querySelectorAll("*");
     for(var i = 0; i < all.length; ++i) {
       if(/unknown/gim.test(all[i])) {
@@ -212,7 +208,7 @@ ff._GET = function(url, callback) {
 
 
 /*** Custom Tags Code */
-ff.getUnknownTags = function() {
+ff.getCustomTags = function() {
 
   var customTags = {};
   ff._getCustomTags = function() {
