@@ -35,7 +35,8 @@ Create a html file.
   ```
   
   main.js  
-  ```import ff from "https://fastframework.ga/ff.js";
+  ```
+  import ff from "https://fastframework.ga/ff.js";
   /* Define the mustache value */
   ff.mustache.date = new Date();
 
@@ -59,7 +60,8 @@ Create a html file.
   + ael( element, event, callback );  
   Wraper around addEventListener.
   Example:  
-  ```ael( $("myDiv"), "click", function() {
+  ```
+  ael( $("myDiv"), "click", function() {
      alert("You clicked my div.");
    });
    ```
@@ -69,13 +71,15 @@ Create a html file.
   ### ff.defineShortcut(alias, target);
   Create a new alias.  
   Example:  
-  ```ff.defineShortcut("_", alert);
+  ```
+  ff.defineShortcut("_", alert);
   _("Hello");
   ```  
   
   ### ff.router.start();
   Activate the router. Routes need to be declared before call this method. Example:  
-  ```ff.routes = {
+  ```
+  ff.routes = {
   route1: {
     name: "home",
     action: function() {
@@ -115,7 +119,8 @@ ff.router.start();
   ### ff.mustache
   You declare your properties under the mustache object.  
   Example:  
-  ```ff.mustache.date = new Date();  
+  ```
+  ff.mustache.date = new Date();  
   ff.mustache.myNick = "StringManolo";
   ff.mustache.myHeader = "<h1>FastFramework</h1>"
 
@@ -127,7 +132,8 @@ ff.router.start();
 
   ### ff.getUnknownTags();
   Find all the html tags under the pattern ```<tag></tag>``` being ```tag``` a not already existing tag in the parser of your browser. Recomended to prepend ```my``` to make sure the tag does not exist. Example:  
-  ```ff.customTags = {
+  ```
+  ff.customTags = {
 	myMenu:`<section><article id="mainMenu"><a href="#home">HOME</a>
 <a href="#example">EXAMPLE</a>
 <a href="#updates">UPDATES</a>
