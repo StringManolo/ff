@@ -5,6 +5,7 @@ body {
   color: #eee;
   text-size-adjust: none;
   font-size: 1.8em;
+  word-break: break-word;
 }
 
 header {
@@ -31,13 +32,13 @@ a {
   bottom: 3px;
 }
 
-#xss { 
+#xss, #csrf { 
   padding: 2% 2% 2% 2%;
   border-radius: 1%;
   font-size: 1.8em;
 }
 
-#xss > p {
+#xss > p, #csrf > p {
   margin: 0 2% 5% 4%;
 }
 
