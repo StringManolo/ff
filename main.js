@@ -15,8 +15,8 @@ import ff from "./ff.js";
   ff.defineShortcut("_", alert);
 
 /* Example of usage */
-  _("This is the body innerHTML:" + $("body").innerHTML);
-
+/*  _("This is the body innerHTML:" + $("body").innerHTML);
+*/
 
 /* My routes */
 ff.routes = {
