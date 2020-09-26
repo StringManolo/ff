@@ -207,15 +207,6 @@ ff._GET = function(url, callback) {
 /* End Utils Code ***/
 
 
-ff._insertHTML = function(element, attribute, code) {  
-  element[attribute] = code;  
-  var scripts = element.querySelectorAll("script");   
-  for(var i = 0; i < scripts.length; ++i) {  
-    eval(scripts[i].text);  
-  }
-}  
-
-
 /*** Custom Tags Code */
 ff.getCustomTags = function() {
 
@@ -238,11 +229,7 @@ ff.getCustomTags = function() {
     ff._GET("./"+element.replace("-","")+".ff", function(resp) {
       var currentTag = document.querySelectorAll(element);
       for(var i = 0; i < currentTag.length; ++i) {
-try {
-alert("Inserting:\n" + resp);
-alert("As " + currentTag[i] + ".innerHTML");
-        ff._insertHTML(currentTag[i], "innerHTML", resp);
-} catch(err) { alert(err) }
+        currentTag[i].innerHTML = resp;
 	getMustacheSintax();
       }
     });
