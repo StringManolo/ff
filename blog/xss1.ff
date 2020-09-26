@@ -1,0 +1,51 @@
+<div id="xss"><h2><span class="inlineHTML">XSS</span>, mi fallo de seguridad favorito.</h2>
+<p>Durante mi jornada diaria visito un montón de páginas webs. Muchas de ellas están desarrolladas por expertos en seguridad web o profesionales del sector con un buen bagaje.</p>
+<p>También me relaciono y estoy en contacto con desarrolladores que están empezando a construir sus primeras páginas web, otros que llevan un par de añitos y no les interesa la seguridad web, etc.</p>
+<p>Viendo el código de una de estas páginas, lo primero que sueles ver es algún input reflejado en la página mediante innerHTML o algún formulario reflejado por código PHP que no hace ningún tipo de validación.</p>
+<p>Después están los desarrolladores intermedios, y estos son los que me interesan. Usualmente son desarrolladores que conocen ya los fallos de seguridad e intentan proveer sus soluciones, ya que aún no tienen conocimiento de las buenas prácticas y soluciones populares que ya han sido provadas ser bastante seguras.</p>
+<p>Una de estas soluciones pasaba por limpiar todas las comillas para que el usuario no pudiese crear strings. El concepto es sencillo, yo mando un texto al servidor, el servidor crea una nueva página y lo muestra. Entonces antes de mostrarlo, el desarrollador decidió que era más seguro si el navegador le pasaba un filtro para evitar la creación de strings y el uso de espacios.</p>
+<p><code lang="html"><pre>
+
+  function xSSFilter(str) {
+    return str
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;')
+    .replace(/\ /g, '')
+    .replace(\`\g, '');
+  }
+
+</pre></code></p>
+<p><span id="vuln">Intenta saltártelo!</span></p>
+<p><input type="text" id="filter" value="Intenta saltártelo!"></p>
+<p><button type="button" id="bSolution">Solución</button></p>
+<div id="afterClick">
+<p>El filtro elimina las comillas dobles, simples, los espacios y los backticks. El payload es sencillo, el típico <span class="inlineHTML">&lt;img onerror="alert()" src="ninguno"></span> al que tras pasarle el filtro queda como <span class="inlineHTML">&lt;imgonerror=alert()src=ninguno></span> qué obviamente no es html válido.</p>
+<p>Uno de los payload más comunes es <span class="inlineHTML">&lt;svg/onload=alert()></span> que debido al framework y diseño de este blog sobre él, no se ejecuta. Si observas atentamente verás que se utiliza <span class="inlineHTML">/</span> en lugar del espacio. Podemos intentarlo: <span class="inlineHTML">&lt;img/onerror=alert()/src=ninguno></span> pero el <span class="inlineHTML">/</span> solo nos sirve para separar la etiqueta del atributo, cuando se utiliza <span class="inlineHTML">/</span> dentro de un atributo, pasa a formar parte de él, entendiendo el navegador el payload como un solo atributo <span class="inlineHTML">&lt;img onerror="alert()/src=ninguno"></span>. Incluso podemos escribir un texto usando la sintaxis literal de las expresiones regulares, que no está filtrada <span class="inlineHTML">/ejemplo/</span>.</p>
+<p>La solución pasa por otra forma válida de espaciar que no sea el espacio. Los tabuladores. <span class="inlineHTML">&lt;img TABULADOR onerror=alert() TABULADOR src=ninguno></span>.</p>
+<p>Existen otras formas de saltarse este filtro con tags de video y audio por ejemplo y eventos como onplay, u otros caracteres como el salto de linea y demás, y en general se saltan la mayoría de filtros que no siguen unas normas básicas como la utilización de listas blancas en lugar de listas negras, no utilizar propiedades como innerHTML cuando no sea extrictamente necesario, SIEMPRE filtrarlo todo en el backend, etc.</p>
+</div>
+</p>
+</div>
+<script>
+document.querySelector("#afterClick").style.display = "none";
+
+function xSSFilter(str) {
+  return str
+  .replace(/"/g, '&quot;')
+  .replace(/'/g, '&#39;')
+  .replace(/\ /g, '')
+  .replace(/`/g, '');
+}
+
+document.querySelector("#filter").addEventListener("input", function() {
+  document.querySelector("#vuln").innerHTML = xSSFilter(document.querySelector("#filter").value);
+});
+
+document.querySelector("#bSolution").addEventListener("click", function() {
+  document.querySelector("#filter").value = "<img	onerror=alert(/hackeado/)	src= >";
+  document.querySelector("#vuln").innerHTML = xSSFilter("<img	onerror=alert(/hackeado/)	src= >");
+  document.querySelector("#afterClick").style.display = "block";
+  window.location = window.location + "#filter";
+});
+</script>
+
