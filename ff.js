@@ -238,11 +238,7 @@ ff.getCustomTags = function() {
     ff._GET("./"+element.replace("-","")+".ff", function(resp) {
       var currentTag = document.querySelectorAll(element);
       for(var i = 0; i < currentTag.length; ++i) {
-try {
-alert("Inserting:\n" + resp);
-alert("As " + currentTag[i] + ".innerHTML");
         ff._insertHTML(currentTag[i], "innerHTML", resp);
-} catch(err) { alert(err) }
 	getMustacheSintax();
       }
     });
