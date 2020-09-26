@@ -1,10 +1,34 @@
 body {
   margin: 0 0 0 0;
   padding: 1%;
-  background-color: #222;
-  color: #ddd;
+  background-color: #000;
+  color: #eee;
   text-size-adjust: none;
   font-size: 1.8em;
+}
+
+header {
+  border-bottom: 1px solid red;
+}
+
+nav {
+  font-size: 2em;
+  margin: 5% 0 2% 0;
+}
+
+nav > a {
+  
+}
+
+a {
+  
+}
+
+#aHeader {
+  position: fixed;
+  font-size: 2em;
+  right: 3px;
+  bottom: 3px;
 }
 
 #xss { 
@@ -19,8 +43,8 @@ body {
 
 code[lang='html'] {
   display: block;
-  background-color: #333;
-  color: #4f4;
+  background-color: #111;
+  color: #7D26CD;
 }
 
 #filter, #bSolution {
@@ -37,5 +61,5 @@ code[lang='html'] {
 }
 
 .inlineHTML {
-  color: orange;
+  color: #ff0;
 }
