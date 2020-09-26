@@ -8,5 +8,8 @@
 <p>El código HTML de esta imagen es: <span class="inlineHTML">&lt;img src="https://instagram.com/favicon.ico"></span> y de la misma forma que se manda una petición pidiendo la imagen, se puede mandar una petición a cualquier otro enlace:
 <img src="https://www.instagram.com/NombreDeUsuario/miCuenta/Eliminar"></p>
 <p>El código HTML de esta imagen es: <span class="inlineHTML">&lt;img src="https://www.instagram.com/NombreDeUsuario/miCuenta/Eliminar"></span>. Si la página de instagram tuviese este fallo de seguridad, y yo supiese el nombre de tu cuenta de instagram, hace un buen rato que tu navegador habría borrado tu cuenta de instagram sin tú saberlo.</p>
+<p>Sigue sin ser lo suficientemente peligroso? Cuando este fallo se combina con otras característica de una web, que no necesariamente implican fallos de seguridad (como añadir imágenes de otros servicios) es posible atacar a practicamente TODOS los usuarios que visiten la web para realizar las acciones no protegidas a través de este fallo de seguridad.</p>
+<p>Puede que el fallo esté infravalorado debido a que la versión más común y descuidad es el CSRF Logout con el que básicamente desloggeas al usuario afectado de su cuenta, lo cual implica molestias, perdidas pero no una grande afectación continua sobre la aplicación, porque algún usuario enviará un reporte del fallo y lo solucionarán sin mucho problema.</p>
+<p>Esta mentalidad es erronea. Estos fallos pueden atacar absolutamente cualquier tipo de funcionalidad que la aplicación permita mediante una petición. Lo cual suele implicar que se pueden atacar una parte considerable de los usuarios de la aplicación simultaneamente.</p>
 </div>
 
