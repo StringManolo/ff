@@ -45,7 +45,7 @@ document.querySelector("#bSolution").addEventListener("click", function() {
   document.querySelector("#filter").value = "<img	onerror=alert(/hackeado/)	src= >";
   document.querySelector("#vuln").innerHTML = xSSFilter("<img	onerror=alert(/hackeado/)	src= >");
   document.querySelector("#afterClick").style.display = "block";
-  window.location = window.location + "#filter";
+  window.location = "https://fastframework.ga/blog/#filter";
 });
 </script>
 
