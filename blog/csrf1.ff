@@ -6,6 +6,7 @@
 <p>Es bastante peligroso verdad? Pero necesita que justo el dueño de la cuenta haga click en él. Puede que el usuario sea precavido y mire el enlace antes de pincharlo. PEEERO... Hay otras formas de explotar este fallo. Siendo las imágenes una de las mas peligrosas. Cuando se incluye una imagen en una página web, tu navegador sigue el enlace de la imagen automáticamente para descargar el contenido. Por ejemplo la siguiente imagen ha sido descargada de instagram cuando se cargó esta página web:
 <img src="https://instagram.com/favicon.ico"></p>
 <p>El código HTML de esta imagen es: <span class="inlineHTML">&lt;img src="https://instagram.com/favicon.ico"></span> y de la misma forma que se manda una petición pidiendo la imagen, se puede mandar una petición a cualquier otro enlace:
+
 <img src="https://www.instagram.com/NombreDeUsuario/miCuenta/Eliminar"></p>
 <p>El código HTML de esta imagen es: <span class="inlineHTML">&lt;img src="https://www.instagram.com/NombreDeUsuario/miCuenta/Eliminar"></span>. Si la página de instagram tuviese este fallo de seguridad, y yo supiese el nombre de tu cuenta de instagram, hace un buen rato que tu navegador habría borrado tu cuenta de instagram sin tú saberlo.</p>
 <p>Sigue sin ser lo suficientemente peligroso? Cuando este fallo se combina con otras características de una web, que no necesariamente implican fallos de seguridad (como añadir imágenes de otros servicios) es posible atacar a practicamente TODOS los usuarios que visiten la web para realizar las acciones no protegidas a través de este fallo de seguridad.</p>
