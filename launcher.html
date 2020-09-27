@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Loader</title>
+</head>
+<body>
+{{ example }}
+<script>
+/* Function to download the library from github */
+function GET(url, callback) {
+  var peticion = new XMLHttpRequest();
+  peticion.open("GET", url , true);
+  peticion.send();
+  peticion.onreadystatechange = function() {
+    if (peticion.readyState == 4) {
+      if (peticion.status == 0 || peticion.status == 200) {
+        callback(peticion.responseText);
+      }
+    }
+  }      
+}
+
+/* Url of the json stringified function returning the ff object. */
+GET("https://raw.githubusercontent.com/StringManolo/ff/master/json/ff.json", function(resp, ff, ff2, fBody) {
+  /* resp is the json response. ff & ff2 & fBody are just void variables. */
+
+  /* Parse the downloaded json */
+  ff2  = JSON.parse(resp);
+
+  /* Find the function body from the parsed function as string. */
+  fBody = ff2.match(/function[^{]+\{([\s\S]*)\}$/)[1];
+  
+  /* Create a new function */
+  ff = new Function([], fBody);
+
+  /* Call the function & asign the returned object to the ff variable */
+  ff = ff();
+
+  /* From here you can use the framework freely. */
+  ff.mustache.example = "Fetching the framework from github in JSON works.";
+  ff.getMustacheSintax();
+
+});
+
+</script>
+</body>
+</html>
