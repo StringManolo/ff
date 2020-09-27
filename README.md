@@ -8,7 +8,7 @@ This proyect is also hosted at Netlify and accesible here https://fastframework.
   This file. Documentation writed in markdown.  
 
 + blog  
-  Example of a simple blog using some features of ff.  
+  Example of a simple [blog](https://fastframework.ga/blog/) using some features of ff.  
   + csrf1.ff  
     Article about csrf bugs. ```<csrf-1>``` tag in the html.  
   + index.html  
