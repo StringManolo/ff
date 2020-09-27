@@ -55,7 +55,8 @@ Example of a simple spa using some features of ff. Live [here](https://fastframe
     FastFramework example using the launcher.  
 4 directories, 20 files.  
 
-### Install
+### Install  
+##### ES6 module import.  
 Create a html file.  
   Link your main.js file.  
   Import the ff module from your main.js file.  
@@ -86,7 +87,59 @@ Create a html file.
   /* replace the mustaches by the values */
   ff.getMustacheSintax();
   ```
-  
+
+  This is the recommended way.
+
+
+##### JSON object import  
+Create a html file.
+  Fetch the json and create the object.
+  Use your code from the callback.  
+
+  index.html
+  ```
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <meta charset="utf-8">
+      <title>My WebPage</title>
+    </head>
+    <body>
+
+      {{ date }}
+
+      <script>
+      function GET(url, callback) {
+        var peticion = new XMLHttpRequest();
+        peticion.open("GET", url , true);
+        peticion.send();
+        peticion.onreadystatechange = function() {
+          if (peticion.readyState == 4) {
+            if (peticion.status == 0 || peticion.status == 200) {
+              callback(peticion.responseText);
+            }
+          }
+        }      
+      }
+
+      GET("https://raw.githubusercontent.com/StringManolo/ff/master/json/ff.json", function(resp, ff, ff2, fBody) {
+        ff2  = JSON.parse(resp);
+        fBody = ff2.match(/function[^{]+\{([\s\S]*)\}$/)[1];
+        ff = new Function([], fBody);
+        ff = ff();
+
+        /* From here you can use the framework freely. */
+        ff.mustache.date = new Date();
+        ff.getMustacheSintax();
+
+      });
+      </script>
+    </body>
+  </html>
+  ```
+
+  You may want to do this if you have CORS problems or you can't use multiple files in your static site hosting.
+
 # Methods 
   ### ff.activateShortcuts();  
   Activate the default shortcut aliases:
