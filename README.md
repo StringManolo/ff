@@ -3,14 +3,47 @@ Small (250 lines of code) javascript framework library to provide you with some 
 This proyect is also hosted at Netlify and accesible here https://fastframework.ga/ff.js
 
 ### Files Structure
+  
++ README.md  
+  This file. Documentation writed in markdown.  
+
++ blog  
+  Example of a simple blog using some features of ff.  
+  + csrf1.ff  
+    Article about csrf bugs. ```<csrf-1>``` tag in the html.  
+  + index.html  
+    Index html blog file.  
+  + main.css  
+    Main css blog file.  
+  + main.js  
+    Main javascript blog file. Imports the libarary from url using ES6 módule and call some framework methods.   
+  + xss1.ff  
+    Article about xss filter bypass. ```<xss-1>``` tag in the hrml.  
 + ff.js  
-  Framework code.  
+  All the framework code is here. Exported as an object using ES6 modules. This is the file you need, to use the framework. Other files like blog/main.js are here as simple examples of usage.  
 + index.html  
-  Test file.
+  Example of framework usage.  
++ json  
+  Json folder.  
+  + ff.json  
+    The ff.js wrapped into a function returning the ff ibject.  
+  + jsonExporter.html  
+    This file is a rudimentary way to generate the json from the hardcoded ff.js. Ignore this.  
++ launcher.html  
+  Alternative to use the framework in case you don't want to use ES6 modules, or it's complex for your level among other reasons like you find it more comfortable this way. As an overview, this is just a html file with some js donwloading the ff.json and creating the ff object from it, so you can use it inside the GET function callback.  
 + main.js  
-  Test file/Example of usage.
+  Another example of ff.js import from local, and usage.  
 + mycustom.ff  
-  Code to replace ```<my-custom></my-custom>``` tags.
+  Example of a custom tag file.  
++ netlify.toml  
+  This file is to make netlify servers (where is hosted https://fastframework.ga) include CORS headers, so you can import directly the ff.js file using the url https://fastframework.ga/ff.js  
++ oldCode  
+  Old versions of ff project code. Just for fun or reference.
+  + oldVersion2ForReference.txt  
+    Totally Remaked to use ES6 modules, avoid global scope pollution and way better organiced. Not having support yet to include script tags inside .ff files.  
+  + oldVersionForReference.txt  
+    First working version of ff.js, be carefull, dangerous code.  
+3 directories, 16 files  
 
 ### Install
 Create a html file.  
