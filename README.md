@@ -244,7 +244,7 @@ ff.getUnknownTags();
 
   ### ff.getCustomTags();
   Find all the html tags under the pattern ```<custom-tag></cutom-tag>``` being ```custom-tag``` 2 keywords separated by a guion. The guion is removed, becarefull about that because ```<hellofrom-here>``` and ```<hello-fromhere>``` are referencing the same file after the guion is removed.
-  This tags will be filled with the content of a file named sema as tag and ending by .ff  
+  This tags will be filled with the content of a file named same as tag and ending by .ff  
   Example:  
   index.html
   ```
