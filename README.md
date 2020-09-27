@@ -226,7 +226,7 @@ ff.router.start();
   ff.getMustacheSintax();
   ```  
   You can use {{ myHeader }} to show as text or {{{ myHeader }}} to show as html.  
-  Notice the method ```ff.getMustacheSintax();``` being called to replace the the mustache sintax from all the document to corresponding values.
+  Notice the method ```ff.getMustacheSintax();``` being called to replace the mustache sintax from all the document to corresponding values.
 
   ### ff.getUnknownTags();
   Find all the html tags under the pattern ```<tag></tag>``` being ```tag``` a not already existing tag in the parser of your browser. Recomended to prepend ```my``` to make sure the tag does not exist. Example:  
