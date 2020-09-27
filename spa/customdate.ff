@@ -1,0 +1,2 @@
+<span id="customDate">date: </span>
+<script>document.querySelector("#customDate").innerText += " " + new Date();</script>

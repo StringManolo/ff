@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Fast Framework Example</title>
+<style>
+
+body {
+  margin: 0 0 0 0;
+  padding: 4px 40px 4px 40px;
+  width: 1024px;
+  height: 720px;
+  text-size-adjust: none;
+}
+
+#center {
+  width: 1024px;
+  text-align: center;
+  border-bottom: solid 1px #000;
+}
+
+myViews a {
+  display: inline-block;
+  text-decoration: none;
+  color: #022;
+}
+
+myViews a:visited {
+  color: #255;
+}
+
+myViews a:active {
+  color: #fff;
+}
+
+custom-tag1 {
+  color: red;
+}
+
+#mainMenu {
+  font-size: 30px;
+}
+
+#mainMenu a {
+  margin: 0 20px 0 20px;
+  font-size: 40px;
+}
+
+myViews {
+  width: 1024px;
+  height: 720px;
+  font-size: 20px;
+}
+
+</style>
+</head>
+<body>
+
+<div id="center">
+<myViews>
+<myMenu></myMenu>
+</myViews>
+</div>
+
+<custom-tag1></custom-tag1>
+
+<custom-date></custom-date>
+
+{{{ copyright }}}
+
+<script src="./main.js"></script>
+</body>
+</html>
