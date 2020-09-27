@@ -44,7 +44,7 @@ This proyect is also hosted at Netlify and accesible [here](https://fastframewor
   + [oldVersionForReference.txt](https://github.com/StringManolo/ff/blob/master/oldCode/oldVersionForReference.txt)  
     First working version of ff.js, be carefull, dangerous code. 
 + [spa](https://github.com/StringManolo/ff/tree/master/spa)  
-Example of a simple [spa](https://fastframework.ga/spa/) using some features of ff.  
+Example of a simple spa using some features of ff. Live [here](https://fastframework.ga/spa/).  
   + [customdate.ff](https://github.com/StringManolo/ff/blob/master/spa/customdate.ff)  
     Small script showing date.  
   + [customtag.ff](https://github.com/StringManolo/ff/blob/master/spa/customtag.ff)   
