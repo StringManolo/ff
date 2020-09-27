@@ -42,8 +42,18 @@ This proyect is also hosted at Netlify and accesible [here](https://fastframewor
   + [oldVersion2ForReference.txt](https://github.com/StringManolo/ff/blob/master/oldCode/oldVersion2ForReference.txt)  
     Totally Remaked to use ES6 modules, avoid global scope pollution and way better organiced. Not having support yet to include script tags inside .ff files.  
   + [oldVersionForReference.txt](https://github.com/StringManolo/ff/blob/master/oldCode/oldVersionForReference.txt)  
-    First working version of ff.js, be carefull, dangerous code.  
-3 directories, 16 files  
+    First working version of ff.js, be carefull, dangerous code. 
+  + [spa](https://github.com/StringManolo/ff/tree/master/spa)  
+  Example of a simple [spa](https://fastframework.ga/spa/) using some features of ff.  
+    + [customdate.ff](https://github.com/StringManolo/ff/blob/master/spa/customdate.ff)  
+      Small script showing date.  
+    + [customtag.ff](https://github.com/StringManolo/ff/blob/master/spa/customtag.ff)   
+      Small text showing a message.  
+    + [index.html](https://github.com/StringManolo/ff/blob/master/spa/index.html)  
+      Spa html.  
+    + [main.js](https://github.com/StringManolo/ff/blob/master/spa/main.js)  
+      FastFramework example using the launcher.  
+4 directories, 20 files.  
 
 ### Install
 Create a html file.  
