@@ -30,7 +30,7 @@ This proyect is also hosted at Netlify and accesible [here](https://fastframewor
   + [jsonExporter.html](https://github.com/StringManolo/ff/blob/master/json/jsonExporter.html)  
     This file is a rudimentary way to generate the json from the hardcoded ff.js. Ignore this.  
 + [launcher.html](https://github.com/StringManolo/ff/blob/master/launcher.html)  
-  Alternative to use the framework in case you don't want to use ES6 modules, or it's complex for your level among other reasons like you find it more comfortable this way. As an overview, this is just a html file with some js donwloading the ff.json and creating the ff object from it, so you can use it inside the GET function callback.  
+  Alternative to use the framework in case you don't want to use ES6 modules, or it's complex for your level among other reasons like you find it more comfortable this way. As an overview, this is just a html file with some js downloading the ff.json and creating the ff object from it, so you can use it inside the GET function callback.  
 + [main.js](https://github.com/StringManolo/ff/blob/master/main.js)  
   Another example of ff.js import from local, and usage.  
 + [mycustom.ff](https://github.com/StringManolo/ff/blob/master/mycustom.ff)  
