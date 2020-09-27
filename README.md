@@ -53,8 +53,9 @@ Example of a simple spa using some features of ff. Live [here](https://fastframe
     Spa html.  
   + [main.js](https://github.com/StringManolo/ff/blob/master/spa/main.js)  
     FastFramework example using the launcher.  
+  
 4 directories, 20 files.  
-
+  
 ### Install  
 ##### ES6 module import.  
 Create a html file.  
