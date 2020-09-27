@@ -139,7 +139,7 @@ Create a html file.
   ```
 
   You may want to do this if you have CORS problems or you can't use multiple files in your static site hosting.  
-  As an example, you can see this same code working in blogger [here](https://diariodedesarrollador.blogspot.com/2020/09/testing-fastframework-support-into.html).
+  As an example, you can see this same code working in blogger [here](https://diariodedesarrollador.blogspot.com/2020/09/testing-fastframework-support-into.html). Or a small spa test working too in blogger [here](https://diariodedesarrollador.blogspot.com/2020/09/test-ff-spa-support.html).
 
 # Methods 
   ### ff.activateShortcuts();  
