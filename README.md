@@ -58,7 +58,7 @@ Example of a simple spa using some features of ff. Live [here](https://fastframe
 ### Install  
 ##### ES6 module import.  
 Create a html file.  
-  Link your main.js file.  
+  Link your main.js file including type="module".  
   Import the ff module from your main.js file.  
   
   index.html  
