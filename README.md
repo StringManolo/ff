@@ -8,7 +8,7 @@ This proyect is also hosted at Netlify and accesible [here](https://fastframewor
   This file. Documentation writed in markdown.  
 
 + [blog](https://github.com/StringManolo/ff/tree/master/blog)  
-  Example of a simple [blog](https://fastframework.ga/blog/) using some features of ff.  
+  Example of a simple blog using some features of ff importing from ES6 module. Live [here](https://fastframework.ga/blog/).  
   + [csrf1.ff](https://github.com/StringManolo/ff/blob/master/blog/csrf1.ff)  
     Article about csrf bugs. ```<csrf-1>``` tag in the html.  
   + [index.html](https://github.com/StringManolo/ff/blob/master/blog/index.html)   
