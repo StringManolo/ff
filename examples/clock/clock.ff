@@ -1,6 +1,14 @@
 <svg version="1.1" class="icon_house" xmlns="http://www.w3.org/2000/svg" width="200" height="200">
   <g>
-  <circle class="clockCircle" cx="100" cy="100" r="90" />
+  <defs>
+    <linearGradient id="clockCircleGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+™     <stop offset="0%" style="stop-color:#aac;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#fff;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+
+  <circle class="clockCircle" cx="100" cy="100" r="95" />
   <line class="clockLine" x1="100" y1="100" x2="100" y2="20" />
   <line class="hourLine" x1="100" y1="100" x2="100" y2="50" />
 
@@ -17,9 +25,9 @@
 
 <style>
 .clockCircle {
-  stroke: #444;
-  stroke-width: 2;
-  fill: #eee;
+  stroke: #000;
+  stroke-width: 1;
+  fill: url(#clockCircleGradient);
 }
 
 .clockLine {
@@ -41,6 +49,11 @@
 
 .clockSmallestCircle {
   fill: #fff;
+}
+
+text {
+  font-family:Tahoma,Sans,Arial;
+  fill: #000;
 }
 </style>
 
