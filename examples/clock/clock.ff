@@ -2,13 +2,14 @@
   <g>
   <circle class="clockCircle" cx="100" cy="100" r="90" />
   <line class="clockLine" x1="100" y1="100" x2="100" y2="20" />
+  <line class="hourLine" x1="100" y1="100" x2="100" y2="50" />
 
   <text x="90" y="30">12</text>
   <text x="175" y="105">3</text>
   <text x="95" y="180">6</text>
   <text x="20" y="105">9</text>
 
-  <line class="clockSmallLine" x1="100" y1="100" x2="100" y2="50" />
+  <line class="clockSmallLine" x1="100" y1="100" x2="100" y2="30" />
   <circle class="clockSmallCircle" cx="100" cy="100" r="3" />
   <circle class="clockSmallestCircle" cx="100" cy="100" r="2" />
   </g>
@@ -26,6 +27,12 @@
   transform-origin: 50% 50%;
 }
 
+.hourLine {
+  stroke: #000;
+  transform-origin: 50% 50%;
+  stroke-width: 1;
+}
+
 .clockSmallLine {
   stroke: #900;
   transform-origin: 50% 50%;
@@ -38,14 +45,40 @@
 </style>
 
 <script>
-function rotate(selector, grades) {
-  $(selector).style.transform = "rotate(" + grades + "deg)";
-  requestAnimationFrame(hRotate);
+
+requestAnimationFrame(function() {
+  let clockRes = performance.now();
+  return function cl(res) {
+    if(res - clockRes > 1000) {
+      clockRes = res;
+      let d = new Date();
+      moveClock(d.getHours(), d.getMinutes(), d.getSeconds());
+    }
+    requestAnimationFrame(cl);
+  }
+}())
+
+function moveClock(h, m, s) {
+  moveArrow("minutes", m);
+  moveArrow("seconds", s);
+  moveArrow("hours", h);
 }
 
-function hRotate() {
-  rotate(".clockLine", new Date().getSeconds()*6);
-}
+function moveArrow(type, pos) {
+  switch(type) {
+    case "minutes":
+      $(".clockLine")
+        .style.transform = "rotate(" + (6*pos) + "deg)";
+    break;
 
-requestAnimationFrame(hRotate);
+    case "seconds":
+      $(".clockSmallLine")
+        .style.transform = "rotate(" + (6*pos) + "deg)";
+    break;
+
+    case "hours":
+      $(".hourLine")
+        .style.transform = "rotate(" + (30*pos) + "deg)";
+  }
+}
 </script>
