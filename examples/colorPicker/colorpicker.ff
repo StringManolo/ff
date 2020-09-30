@@ -44,10 +44,11 @@ ael($("#bValue"), "change",() => {
 
 function changeRGB(r, g, b) {
 
-  /* Debug */
+  /* Debug
   _(`R: #${(+r).toString(16)}0000
   G: #00${(+g).toString(16)}00
   B: #0000${(+b).toString(16)}`);
+  */
 
   lGrad.addColorStop(0, `#${(+r).toString(16)}0000`);
   lGrad.addColorStop(0.5, `#00${(+g).toString(16)}00`);
