@@ -12,7 +12,7 @@
 <input type="range" id="bValue" value="255"  min="10" max="255">
 </div>
 <script>
-_( (255).toString(16) );
+_( `${(255).toString(16)}` );
 
 let canvas = $("#colorPicker");
 
