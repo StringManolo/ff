@@ -12,7 +12,6 @@
 <input type="range" id="bValue" value="255"  min="10" max="255">
 </div>
 <script>
-_( `${(255).toString(16)}` );
 
 let canvas = $("#colorPicker");
 
@@ -46,9 +45,9 @@ ael($("#bValue"), "change",() => {
 function changeRGB(r, g, b) {
 
   /* Debug */
-  _(`R: #${(r).toString(16)}0000
-  G: #00${(g).toString(16)}00
-  B: #0000${(b).toString(16)}`);
+  _(`R: #${(+r).toString(16)}0000
+  G: #00${(+g).toString(16)}00
+  B: #0000${(+b).toString(16)}`);
 
   lGrad.addColorStop(0, `#${(r).toString(16)}0000`);
   lGrad.addColorStop(0.5, `#00${(g).toString(16)}00`);
