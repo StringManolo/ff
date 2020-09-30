@@ -30,7 +30,7 @@ ff.routes = {
   route2: {
     name: "repo",
     action: function() {
-      if (confirm("Go to github?") {
+      if (confirm("Go to github?")) {
         window.location = "//github.com/StringManolo/ff";
       }
     }
@@ -39,7 +39,7 @@ ff.routes = {
   route3: {
     name: "spa",
     action: function() {
-      if (confirm("Go to spa?") {
+      if (confirm("Go to spa?")) {
         window.location = "//fastframework.ga/spa/";
       }
     }
@@ -48,7 +48,7 @@ ff.routes = {
   route4: {
     name: "blog",
     action: function() {
-      if (confirm("Go to blog?") {
+      if (confirm("Go to blog?")) {
         window.location = "//fastframework.ga/blog/";
       }
     }
