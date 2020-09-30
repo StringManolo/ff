@@ -7,13 +7,40 @@
 </head>
 <body>
 
+
+<h1>Fast Framework</h1>
 {{ date }}
 
+<div class="myMenu">
 <myMenu></myMenu>
-
+</div>
 <my-custom></my-custom>
 
+<clo-ck>route="./examples/clock/"</clo-ck>
 
+<!-- Styles added here so you can notice you are able to style custom tags -->
+<style>
+body {
+  background-color: #333;
+  color: #bbb;
+}
+
+myMenu a {
+  display: flex;
+  color: coral;
+  font-size: 3em;
+}
+
+clo-ck {
+  position: fixed;
+  bottom: 1px;
+  right: 1px;
+}
+
+.clockCircle {
+  fill: coral;
+}
+</style>
 <script type="module" src="main.js"></script>
 </body>
 </html>

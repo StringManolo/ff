@@ -234,16 +234,8 @@ ff.getCustomTags = function() {
   ff._getCustomTags();
 
   var userTags = Object.keys(customTags);
-  let route;
   userTags.forEach(function(element) {
-  route = "./";
-  var tmp = document.querySelector(element).innerHTML;
-  if(tmp) {
-    if(tmp.substr(0, 7) == "route=\"") {
-      route = tmp.substring(7, tmp.length-1)
-    }
-  }
-    ff._GET(route+element.replace("-","")+".ff", function(resp) {
+    ff._GET("./"+element.replace("-","")+".ff", function(resp) {
       var currentTag = document.querySelectorAll(element);
       for(var i = 0; i < currentTag.length; ++i) {
         ff._insertHTML(currentTag[i], "innerHTML", resp);
