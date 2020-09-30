@@ -23,23 +23,43 @@ ff.routes = {
   route1: {
     name: "home",
     action: function() {
-      alert("Home");
+      alert("Welcome to my web!");
     }
   },
 
   route2: {
-    name: "example",
+    name: "repo",
     action: function() {
-      alert("Example");
+      if (confirm("Go to github?") {
+        window.location = "//github.com/StringManolo/ff";
+      }
     }
   },
 
-  amount: 2,
+  route3: {
+    name: "spa",
+    action: function() {
+      if (confirm("Go to spa?") {
+        window.location = "//fastframework.ga/spa/";
+      }
+    }
+  },
+
+  route4: {
+    name: "blog",
+    action: function() {
+      if (confirm("Go to blog?") {
+        window.location = "//fastframework.ga/blog/";
+      }
+    }
+  },
+
+  amount: 4,
 
   routeDefault: {
     name: "default",
     action: function() {
-      alert("Default");
+      alert("This route is not defined!\nMaybe add 404 error page?");
     }
   }
 };
@@ -56,9 +76,9 @@ ff.getMustacheSintax();
 /* Define the <myMenu></myMenu> tag inner content */
 ff.customTags = {
 	myMenu:`<section><article id="mainMenu"><a href="#home">HOME</a>
-<a href="#example">EXAMPLE</a>
-<a href="#updates">UPDATES</a>
-<a href="#about">ABOUT</a></article></section>`
+<a href="#repo">REPO</a>
+<a href="#blog">BLOG</a>
+<a href="#spa">SPA</a></article></section>`
 };
 
 /* replace the unknown tags by the templates */
