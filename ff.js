@@ -239,7 +239,6 @@ ff.getCustomTags = function() {
       var currentTag = document.querySelectorAll(element);
       for(var i = 0; i < currentTag.length; ++i) {
         ff._insertHTML(currentTag[i], "innerHTML", resp);
-	getMustacheSintax();
       }
     });
   });
