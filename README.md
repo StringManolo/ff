@@ -1,6 +1,6 @@
 # FastFramework
 Small (250 lines of code) javascript framework library to provide you with some handfull features in an easy way.  
-This proyect is also hosted at Netlify and accesible [here](https://fastframework.ga/ff.js)
+This proyect is also hosted at Netlify and accesible [here](https://fastframework.ga/ff.js) 
 
 ### Install  
 ##### ES6 module import.  
