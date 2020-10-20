@@ -12,10 +12,10 @@ navigator.serviceWorker.register('./cache.js', {
 .then(function(reg) {
   alert(`fetch then: ${reg}`)
 
-  navigator.serviceWorker.addEventListener('message', function(event) {
+  navigator.serviceWorker.addEventListener('message', function(evento) {
     alert("recived message from sw");
-    alert(event);
-    /*$("#debugLogs").value = "event.data"*/
+    alert(evento);
+    /*$("#debugLogs").value = "evento.data"*/
   });
 
 })
