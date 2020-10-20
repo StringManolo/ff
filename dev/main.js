@@ -1,5 +1,5 @@
 /* Import the ff object from the ffr.js file */
-import ff from "./ff.js";
+import ff from "./ff_dev.js";
 
 /* Activate the default shortcut aliases:
  * $("#myDiv");

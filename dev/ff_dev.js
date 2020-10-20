@@ -243,11 +243,10 @@ ff.getCustomTags = function() {
       route = tmp.substring(7, tmp.length-1)
     }
   }
-    ff._GET(route+element.replace("-","")+".ff", function(resp) {
+    ff._GET(route+element.replace("-","")+".ff.js", function(resp) {
       var currentTag = document.querySelectorAll(element);
       for(var i = 0; i < currentTag.length; ++i) {
         ff._insertHTML(currentTag[i], "innerHTML", resp);
-	getMustacheSintax();
       }
     });
   });
