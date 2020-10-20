@@ -2,10 +2,11 @@ self.addEventListener('fetch', (evento) => {
   self.clients.matchAll()
   .then(function(client) { 
     
-    const destination = evento.request.destination;
+    const destination = evento.request.destination; 
 
     client[0].postMessage({                             command: 'logMessage',                            error: null,                                      message: `Destination: ${evento.request}
-Evento: ${evento}`
+Evento: ${evento}
+Url: ${evento.url}`
     });
 
     switch (destination) {
