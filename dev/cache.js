@@ -1,5 +1,8 @@
+document.querySelector("#debugLogs").value = debug.value = "The cache service worker write this text at start of execution";
+
 self.addEventListener('fetch', (event) => {
   let debug = document.querySelector("#debugLogs");
+  debug.value = "The cache service worker write this text from 'fetch' event listener";
   const destination = event.request.destination;
   switch (destination) {
     case 'style':
