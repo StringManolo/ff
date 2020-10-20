@@ -4,6 +4,22 @@ import ff from "./ff_dev.js";
 
 ff.activateShortcuts();
 
+/* Register service worker cache.js */
+
+navigator.serviceWorker.register('./cache.js', {
+  scope: './'
+})
+.then(function(reg) {
+  alert(`fetch then: ${reg}`)
+})
+.catch(function(err) {
+  alert(`fetch catch: ${err}`)
+});
+/* end register */
+
+
+
+
   ff.customTags = {
 	myMenu:`<section><article id="mainMenu"><a href="#home">HOME</a>
 <a href="#writeups">WRITEUPS</a>
