@@ -1,4 +1,4 @@
-import ff from "./ff_dev.js";
+import ff from "./ff.js";
 
 /* import ff from "https://fastframework.ga/ff.js"; */
 
@@ -13,13 +13,13 @@ navigator.serviceWorker.register('./cache.js', {
   /* alert(`fetch then: ${reg}`) */
   
   let urlsToCache = [
-"./logs/dev/historylogs.ff.js",
-"./blogEntries/xss/xss1.ff.js",
-"./blogEntries/xss/w3schoolsxss1.ff.js",
-"./blogEntries/csrf/w3schoolscsrf1.ff.js",
-"./projects/fastframework/fastframework.ff.js",
-"./projects/jex/jex.ff.js",
-"./ff_dev.js",
+"./logs/dev/historylogs.ff",
+"./blogEntries/xss/xss1.ff",
+"./blogEntries/xss/w3schoolsxss1.ff",
+"./blogEntries/csrf/w3schoolscsrf1.ff",
+"./projects/fastframework/fastframework.ff",
+"./projects/jex/jex.ff",
+"./ff.js",
 "./main.js",
 "./main.css",
 "./index.html"];
