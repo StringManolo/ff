@@ -15,7 +15,7 @@ navigator.serviceWorker.register('./cache.js', {
   navigator.serviceWorker.addEventListener('message', function(evento) {
     alert("recived message from sw");
     alert(evento.data.message);
-    $("#debugLogs").value = "evento.data.message"
+    $("#debugLogs").innerText = "evento.data.message"
   });
 
 })
