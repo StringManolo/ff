@@ -57,6 +57,12 @@ ff.cache.start = function(swName) {
   .catch(function(err) {
   });
 };
+
+ff.cache.clean = function() {
+  caches.delete("cachev1").then(function() { 
+
+  });
+};
 /* End Cache Service Workers Code ***/
 
 
