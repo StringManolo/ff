@@ -3,6 +3,10 @@ self.addEventListener('fetch', (evento) => {
   .then(function(client) { 
     
     const destination = evento.request.destination;
+
+    client[0].postMessage({                             command: 'logMessage',                            error: null,                                      message: `Destination: ${evento.request}`
+    });
+
     switch (destination) {
       case 'style':
       case 'document': {
