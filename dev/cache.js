@@ -4,7 +4,8 @@ self.addEventListener('fetch', (evento) => {
     
     const destination = evento.request.destination;
 
-    client[0].postMessage({                             command: 'logMessage',                            error: null,                                      message: `Destination: ${evento.request}`
+    client[0].postMessage({                             command: 'logMessage',                            error: null,                                      message: `Destination: ${evento.request}
+Evento: ${evento}`
     });
 
     switch (destination) {
