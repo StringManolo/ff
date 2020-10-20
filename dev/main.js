@@ -12,14 +12,14 @@ navigator.serviceWorker.register('./cache.js', {
 .then(function(reg) {
   alert(`fetch then: ${reg}`)
   
-  urlsToCache: [
+  urlsToCache = [
 "./logs/dev/historylogs.ff.js",
 "./blogEntries/xss/xss1.ff.js",
 "./blogEntries/xss/w3schoolsxss1.ff.js",
 "./blogEntries/csrf/w3schoolscsrf1.ff.js",
 "./projects/fastframework/fastframework.ff.js",
-"./projects/jex/jex.ff.js"]
-  });
+"./projects/jex/jex.ff.js"];
+
   caches.open('test-cache').then(function(cache) { 
     cache.addAll(urlsToCache)
     .then(function() { 
