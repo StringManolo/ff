@@ -10,7 +10,7 @@ navigator.serviceWorker.register('./cache.js', {
   scope: './'
 })
 .then(function(reg) {
-  alert(`fetch then: ${reg}`)
+  /* alert(`fetch then: ${reg}`) */
   
   let urlsToCache = [
 "./logs/dev/historylogs.ff.js",
