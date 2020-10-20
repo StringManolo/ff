@@ -13,7 +13,9 @@ navigator.serviceWorker.register('./cache.js', {
   alert(`fetch then: ${reg}`)
 
   navigator.serviceWorker.addEventListener('message', function(event) {
-    $("#debugLogs").value = "event.data"
+    alert("recived message from sw");
+    alert(event);
+    /*$("#debugLogs").value = "event.data"*/
   });
 
 })
