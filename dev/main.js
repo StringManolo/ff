@@ -11,6 +11,11 @@ navigator.serviceWorker.register('./cache.js', {
 })
 .then(function(reg) {
   alert(`fetch then: ${reg}`)
+
+  navigator.serviceWorker.addEventListener('message', function(event) {
+    $("#debugLogs").value = "event.data"
+  });
+
 })
 .catch(function(err) {
   alert(`fetch catch: ${err}`)
