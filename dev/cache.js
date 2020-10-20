@@ -3,7 +3,7 @@ self.addEventListener('fetch', (event) => {
     client[0].postMessage({
       command: 'logMessage',
       error: null,
-      message: 'The cache service worker write this text from 'fetch' event listener'
+      message: 'The cache service worker write this text from "fetch" event listener'
     });
   });
 });
