@@ -1,12 +1,52 @@
-self.addEventListener('fetch', (event) => {
-  self.clients.matchAll().then(function(client) { 
-    client[0].postMessage({
-      command: 'logMessage',
-      error: null,
-      message: 'The cache service worker write this text from "fetch" event listener'
-    });
+self.addEventListener('fetch', (evento) => {
+  self.clients.matchAll()
+  .then(function(client) { 
+    
+    const destination = evento.request.destination;
+    switch (destination) {
+      case 'style':
+      case 'document': {
+          
+        client[0].postMessage({
+          command: 'logMessage',
+          error: null,
+          message: "style/document fetched."
+        });
+          
+        /* event.respondWith(
+       
+        ); */
+        return;
+      }
+      
+      case 'script': {
+        client[0].postMessage({
+          command: 'logMessage',
+          error: null,
+          message: "script fetched."
+        });
+          
+        /* event.respondWith(
+        ); */
+        return;
+      }
+    
+      default: {
+        client[0].postMessage({
+          command: 'logMessage',
+          error: null,
+          message: `${destination} fetched under default rule.`
+        });
+          
+        /*event.respondWith(
+      
+        );*/
+        return;
+      }
+    }       
   });
 });
+
 /*  
   const destination = event.request.destination;
   switch (destination) {
