@@ -18,7 +18,10 @@ navigator.serviceWorker.register('./cache.js', {
 "./blogEntries/xss/w3schoolsxss1.ff.js",
 "./blogEntries/csrf/w3schoolscsrf1.ff.js",
 "./projects/fastframework/fastframework.ff.js",
-"./projects/jex/jex.ff.js"];
+"./projects/jex/jex.ff.js",
+"./ff_dev.js",
+"./main.js",
+"./main.css"];
 
   caches.open('test-cache').then(function(cache) { 
     cache.addAll(urlsToCache)
