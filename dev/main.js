@@ -4,15 +4,8 @@ import ff from "./ff.js";
 
 ff.activateShortcuts();
 
-/* Register service worker cache.js */
 
-navigator.serviceWorker.register('./cache.js', {
-  scope: './'
-})
-.then(function(reg) {
-  /* alert(`fetch then: ${reg}`) */
-  
-  let urlsToCache = [
+ff.cache.resources = [
 "./logs/dev/historylogs.ff",
 "./blogEntries/xss/xss1.ff",
 "./blogEntries/xss/w3schoolsxss1.ff",
@@ -23,30 +16,11 @@ navigator.serviceWorker.register('./cache.js', {
 "./main.js",
 "./main.css",
 "./index.html"];
-
-  caches.open('test-cache').then(function(cache) { 
-    cache.addAll(urlsToCache)
-    .then(function() { 
-      
-    });
-  });
-
-  navigator.serviceWorker.addEventListener('message', function(evento) {
-    alert(evento.data.message);
-    $("#debugLogs").innerText = evento.data.message
-  });
-
-})
-.catch(function(err) {
-  alert(`fetch catch: ${err}`)
-});
-/* end register */
+ff.cache.start("./cache.js");
 
 
-
-
-  ff.customTags = {
-	myMenu:`<section><article id="mainMenu"><a href="#home">HOME</a>
+ff.customTags = {
+  myMenu:`<section><article id="mainMenu"><a href="#home">HOME</a>
 <a href="#writeups">WRITEUPS</a>
 <a href="#updates">UPDATES</a>
 <a href="#about">ABOUT</a></article></section>`
