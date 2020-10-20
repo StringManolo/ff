@@ -21,7 +21,8 @@ navigator.serviceWorker.register('./cache.js', {
 "./projects/jex/jex.ff.js",
 "./ff_dev.js",
 "./main.js",
-"./main.css"];
+"./main.css",
+"./index.html"];
 
   caches.open('test-cache').then(function(cache) { 
     cache.addAll(urlsToCache)
