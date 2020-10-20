@@ -2,15 +2,15 @@ self.addEventListener('fetch', (evento) => {
   self.clients.matchAll()
   .then(function(client) { 
     
-    const destination = evento.request.destination; 
-
-    client[0].postMessage({                             command: 'logMessage',                            error: null,                                      message: `Destination: ${evento.request}
-Evento: ${evento}
-Url: ${evento.request.url}`
+    let url = evento.request.url;
+    let path = new URL(url).pathname;
+    let ext = path.substring(path.length-7);
+    client[0].postMessage({                             command: 'logMessage',                            error: null,                                      message: `Url: ${url}
+Ext: ${ext}`
     });
 
-    switch (destination) {
-      case 'style':
+    switch (path) {
+      case "/dev/blogEntries/xss/xss":
       case 'document': {
           
         client[0].postMessage({
