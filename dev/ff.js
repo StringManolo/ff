@@ -51,7 +51,7 @@ alert("Time left to expire cache:\n" + (new Date().getTime - JSON.parse(tl).getT
 
     const tl = JSON.parse(tl);
     const now = new Date();
-    if (now.getTime() > tli) {
+    if (now.getTime() > tl) {
 alert("Cache Expired, setting new TTL")
       localStorage.removeItem(cacheTTL);
       caches.delete("cachev1").then(function() {
