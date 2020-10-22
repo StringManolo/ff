@@ -43,11 +43,11 @@ ff.cache = {}
 ff.cache.resources = [];
 
 ff.cache.start = function(swName, ttl) {
-try {
 alert("Checking cache expiration time.");
   const tl = localStorage.getItem(cacheTTL);
   if (tl) {
-alert("Found cache expiration time\n" + JSON.parse(tl) / 1000 + " seconds");
+alert("Found cache expiration time\n" + JSON.parse(tl) / 1000 + " seconds"); 
+  /*
 alert("Time left to expire cache:\n" + (new Date().getTime - JSON.parse(tl).getTime()) / 1000 + " seconds");
     const tl = JSON.parse(tl);
     const now = new Date();
@@ -74,9 +74,8 @@ alert(`New cache stored with ${localStorage.cacheTTL / 1000} seconds to live`);
     })
     .catch(function(err) {
 alert(err);
-    });
+    }); */
   }
-}catch(errr) {alert(errr)}
 };
 
 ff.cache.clean = function() {
