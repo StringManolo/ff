@@ -44,14 +44,10 @@ ff.cache.resources = [];
 
 ff.cache.start = function(swName, ttl) {
 alert("Checking cache expiration time.");
-  let tl = 0;
-  try { 
-    tl = localStorage.getItem("cacheTTL");
-  } catch (err) {
-alert(err);
+  let tl = 0; 
+    tl = localStorage.cacheTTL;
 alert("tl is set to 0");
-  }
-  if (tl != 0) {
+  if (tl) {
 alert("tl exists");
 
 alert("Found cache expiration time\n" + JSON.parse(tl) / 1000 + " seconds"); 
