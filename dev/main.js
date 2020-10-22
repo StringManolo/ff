@@ -2,8 +2,6 @@ import ff from "./ff.js";
 
 /* import ff from "https://fastframework.ga/ff.js"; */
 
-alert("Main.js file");
-
 ff.activateShortcuts();
 
 ff.customTags = {
