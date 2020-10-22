@@ -43,6 +43,7 @@ ff.cache = {}
 ff.cache.resources = [];
 
 ff.cache.start = function(swName, ttl) {
+try {
 alert("Checking cache expiration time.");
   const tl = localStorage.getItem(cacheTTL);
   if (tl) {
@@ -66,8 +67,8 @@ alert("Cache deleted sucesfull");
       .then(function(cache) { 
         cache.addAll(ff.cache.resources)
         .then(function() {
-	  localStorage.cacheTTL = new Date().getTime() + ttl;
 alert(`New cache stored with ${localStorage.cacheTTL / 1000} seconds to live`);
+	  localStorage.cacheTTL = new Date().getTime() + ttl;
         });
       });
     })
@@ -75,6 +76,7 @@ alert(`New cache stored with ${localStorage.cacheTTL / 1000} seconds to live`);
 alert(err);
     });
   }
+}catch(errr) {alert(errr)}
 };
 
 ff.cache.clean = function() {
