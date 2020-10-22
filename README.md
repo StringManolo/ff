@@ -235,7 +235,8 @@ ff.getUnknownTags();
   "./resources/w3schoolsxsslanscape.png",
   "./resources/w3schoolsxss.png"];
 
-  ff.cache.start("./cache.js", 100000);                      ```
+  ff.cache.start("./cache.js", 100000);
+  ```
   
   The first parameter is the route to a Service Worker. You can copy and paste next code and name it cache.js in same route as your main.js file calling the method and forget about it. 
 
