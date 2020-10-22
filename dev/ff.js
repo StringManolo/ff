@@ -77,7 +77,7 @@ alert("No localStorage set.");
         cache.addAll(ff.cache.resources)
         .then(function() {
 	  localStorage.cacheTTL = new Date().getTime() + ttl;
-	  alert(`New cache stored with ${localStorage.cacheTTL / 1000} seconds to live`);
+	  alert(`New cache stored with ${(localStorage.cacheTTL - new Date().getTime()) / 1000} seconds to live`);
         });
       });
     })
