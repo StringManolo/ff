@@ -52,7 +52,7 @@ alert("tl exists");
 
 alert("Found cache expiration time\n" + +JSON.parse(localStorage.cacheTTL) / 1000 + " seconds"); 
 
-alert("Time left to expire cache:\n" + (new Date().getTime() - JSON.parse(localStorage.cacheTTL).getTime()) / 1000 + " seconds");
+alert("Time left to expire cache:\n" + (new Date().getTime() - JSON.parse(localStorage.cacheTTL)) / 1000 + " seconds");
 
     const now = new Date();
 alert("checking if caché expired");
