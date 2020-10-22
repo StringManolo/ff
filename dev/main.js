@@ -202,4 +202,4 @@ ff.cache.resources = [
 "./resources/w3schoolspayload.png",
 "./resources/w3schoolsxsslanscape.png",
 "./resources/w3schoolsxss.png"];
-ff.cache.start("./cache.js");
+ff.cache.start("./cache.js", 100000);
