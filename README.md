@@ -220,11 +220,25 @@ ff.getUnknownTags();
   ### ff.cache.start()  
   Activate the cache. Resources need to be declared before call this method. Example:
   ```
-  ff.cache.resources = [                                     "./logs/dev/historylogs.ff",                               "./blogEntries/xss/xss1.ff",                               "./blogEntries/xss/w3schoolsxss1.ff",                      "./blogEntries/csrf/w3schoolscsrf1.ff",                    "./projects/fastframework/fastframework.ff",               "./projects/jex/jex.ff",                                   "./ff.js",                                                 "./main.js",                                               "./main.css",                                              "./index.html",                                            "./resources/w3schoolspayload.png",                        "./resources/w3schoolsxsslanscape.png",                    "./resources/w3schoolsxss.png"];
+  ff.cache.resources = [
+  "./logs/dev/historylogs.ff",
+  "./blogEntries/xss/xss1.ff",
+  "./blogEntries/xss/w3schoolsxss1.ff",
+  "./blogEntries/csrf/w3schoolscsrf1.ff",
+  "./projects/fastframework/fastframework.ff",
+  "./projects/jex/jex.ff",
+  "./ff.js",
+  "./main.js",
+  "./main.css",
+  "./index.html",
+  "./resources/w3schoolspayload.png",
+  "./resources/w3schoolsxsslanscape.png",
+  "./resources/w3schoolsxss.png"];
 
   ff.cache.start("./cache.js", 100000);                      ```
   
   The first parameter is the route to a Service Worker. You can copy and paste next code and name it cache.js in same route as your main.js file calling the method and forget about it. 
+
   ```
   self.addEventListener('fetch', (e) => {
     e.respondWith(caches.match(e.request).then((response) => {
@@ -234,7 +248,9 @@ ff.getUnknownTags();
       return fetch(e.request)
    }))
   })
-  ```  
+
+  ``` 
+
   The second parameter 100000 in the previous example is the amount of time the files will be into browser cache. This means way faster file loads. When cache expires the browser will download again the files from the server so new ccontent will be cached. The value you should set here depends totally on how often you update content in your web and what files you chosed to cache.  
   You can test it live [here](https://bugs.stringmanolo.ga)  
 
