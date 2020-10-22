@@ -53,7 +53,7 @@ alert("tl is set to 0");
   }
   if (tl != 0) {
 alert("tl exists");
-/*
+
 alert("Found cache expiration time\n" + JSON.parse(tl) / 1000 + " seconds"); 
 alert("Time left to expire cache:\n" + (new Date().getTime - JSON.parse(tl).getTime()) / 1000 + " seconds");
 
@@ -65,7 +65,7 @@ alert("Cache Expired, setting new TTL")
       caches.delete("cachev1").then(function() {
 alert("Cache deleted sucesfull");
       });
-    } */
+    } 
   } 
 alert("No localStorage");
 /*else { 
