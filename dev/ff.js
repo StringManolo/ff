@@ -43,28 +43,28 @@ ff.cache = {}
 ff.cache.resources = [];
 
 ff.cache.start = function(swName, ttl) {
-/* alert("Checking cache expiration time."); */
+alert("Checking cache expiration time."); 
   let tl = 0; 
     tl = localStorage.cacheTTL;
-/* alert("tl is set to 0"); */
+alert("tl is set to 0"); 
   if (+tl) {
-/* alert("tl exists"); */
+alert("tl exists"); 
 
-/* alert("Found cache expiration time\n" + +JSON.parse(localStorage.cacheTTL) / 1000 + " seconds"); */
+alert("Found cache expiration time\n" + +JSON.parse(localStorage.cacheTTL) / 1000 + " seconds"); 
 
-/* alert("Time left to expire cache:\n" + (new Date().getTime() - localStorage.cacheTTL) / 1000 + " seconds"); */
+alert("Time left to expire cache:\n" + (new Date().getTime() - localStorage.cacheTTL) / 1000 + " seconds"); 
 
     const now = new Date();
-/* alert("checking if caché expired"); */
+alert("checking if caché expired"); 
     if (now.getTime() > +localStorage.cacheTTL) {
-/* alert("Cache Expired, setting new TTL") */
+alert("Cache Expired, setting new TTL") 
       localStorage.cacheTTL = 0;
       caches.delete("cachev1").then(function() {
-/* alert("Cache deleted sucesfull"); */
+alert("Cache deleted sucesfull"); 
       });
     } 
   } else { 
-/* alert("No localStorage set."); */
+alert("No localStorage set."); 
     navigator.serviceWorker.register(swName, {
       scope: './'
     })
@@ -73,13 +73,13 @@ ff.cache.start = function(swName, ttl) {
       .then(function(cache) { 
         cache.addAll(ff.cache.resources)
         .then(function() {
-	  localStorage.cacheTTL = new Date().getTime() + ttl;
-	 /* alert(`New cache stored with ${(localStorage.cacheTTL - new Date().getTime()) / 1000} seconds to live`); */
+	  localStorage.cacheTTL = +(new Date().getTime()) + +ttl;
+alert(`New cache stored with ${(localStorage.cacheTTL - new Date().getTime()) / 1000} seconds to live`); 
         });
       });
     })
     .catch(function(err) {
-/* alert(err); */
+alert(err); 
     }); 
   } 
 };
