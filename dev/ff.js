@@ -47,7 +47,7 @@ alert("Checking cache expiration time.");
   let tl = 0; 
     tl = localStorage.cacheTTL;
 alert("tl is set to 0");
-  if (tl) {
+  if (+tl) {
 alert("tl exists");
 
 alert("Found cache expiration time\n" + JSON.parse(tl) / 1000 + " seconds"); 
