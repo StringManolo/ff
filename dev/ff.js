@@ -48,6 +48,7 @@ alert("Checking cache expiration time.");
   if (tl) {
 alert("Found cache expiration time\n" + JSON.parse(tl) / 1000 + " seconds"); 
 alert("Time left to expire cache:\n" + (new Date().getTime - JSON.parse(tl).getTime()) / 1000 + " seconds");
+/*
     const tl = JSON.parse(tl);
     const now = new Date();
     if (now.getTime() > tl {
@@ -57,6 +58,7 @@ alert("Cache Expired, setting new TTL")
 alert("Cache deleted sucesfull");
       }); 
     }
+*/
   } 
 alert("No localStorage found but script still alive");
    /* else { 
