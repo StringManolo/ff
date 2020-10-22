@@ -46,7 +46,7 @@ ff.cache.start = function(swName, ttl) {
 alert("Checking cache expiration time.");
   let tl = 0;
   try { 
-    tl = localStorage.getItem(cacheTTL);
+    tl = localStorage.getItem("cacheTTL");
   } catch (err) {
 alert(err);
 alert("tl is set to 0");
@@ -62,7 +62,7 @@ alert("Time left to expire cache:\n" + (new Date().getTime() - JSON.parse(tl).ge
 alert("checking if caché expired");
     if (now.getTime() > tl) {
 alert("Cache Expired, setting new TTL")
-      localStorage.removeItem(cacheTTL);
+      localStorage.removeItem("cacheTTL");
       caches.delete("cachev1").then(function() {
 alert("Cache deleted sucesfull");
       });
