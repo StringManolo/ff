@@ -50,7 +50,11 @@ alert("tl is set to 0");
   if (+tl) {
 alert("tl exists");
 
-alert("Found cache expiration time\n" + JSON.parse(tl) / 1000 + " seconds"); 
+try {
+alert("Found cache expiration time\n" + +JSON.parse(tl) / 1000 + " seconds"); 
+} catch(err) {
+alert(err);
+}
 alert("Time left to expire cache:\n" + (new Date().getTime() - JSON.parse(tl).getTime()) / 1000 + " seconds");
 
     const tl = JSON.parse(tl);
