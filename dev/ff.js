@@ -51,7 +51,7 @@ alert("tl is set to 0");
 alert("tl exists");
 
 try {
-alert("Found cache expiration time\n" + +JSON.parse(tl) / 1000 + " seconds"); 
+alert("Found cache expiration time\n" + +JSON.parse(localStorage.cacheTTL) / 1000 + " seconds"); 
 } catch(err) {
 alert(err);
 }
