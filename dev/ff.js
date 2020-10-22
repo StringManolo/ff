@@ -62,7 +62,7 @@ alert("Time left to expire cache:\n" + (new Date().getTime() - JSON.parse(tl).ge
 alert("checking if caché expired");
     if (now.getTime() > tl) {
 alert("Cache Expired, setting new TTL")
-      localStorage.removeItem("cacheTTL");
+      localStorage.cacheTTL = 0;
       caches.delete("cachev1").then(function() {
 alert("Cache deleted sucesfull");
       });
