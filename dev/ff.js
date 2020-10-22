@@ -50,17 +50,13 @@ alert("tl is set to 0");
   if (+tl) {
 alert("tl exists");
 
-try {
 alert("Found cache expiration time\n" + +JSON.parse(localStorage.cacheTTL) / 1000 + " seconds"); 
-} catch(err) {
-alert(err);
-}
-alert("Time left to expire cache:\n" + (new Date().getTime() - JSON.parse(tl).getTime()) / 1000 + " seconds");
 
-    const tl = JSON.parse(tl);
+alert("Time left to expire cache:\n" + (new Date().getTime() - JSON.parse(localStorage.cacheTTL).getTime()) / 1000 + " seconds");
+
     const now = new Date();
 alert("checking if caché expired");
-    if (now.getTime() > tl) {
+    if (now.getTime() > JSON.parse(localStorage.cacheTTL)) {
 alert("Cache Expired, setting new TTL")
       localStorage.cacheTTL = 0;
       caches.delete("cachev1").then(function() {
