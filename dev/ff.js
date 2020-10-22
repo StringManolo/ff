@@ -58,9 +58,8 @@ alert("Cache Expired, setting new TTL")
 alert("Cache deleted sucesfull");
       }); 
     }
-  } 
-alert("No localStorage found but script still alive");
-    else { 
+  } else { 
+alert("No localStorage set.");
     navigator.serviceWorker.register(swName, {
       scope: './'
     })
