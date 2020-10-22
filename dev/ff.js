@@ -56,9 +56,11 @@ alert("Cache Expired, setting new TTL")
       localStorage.removeItem(cacheTTL);
       caches.delete("cachev1").then(function() {
 alert("Cache deleted sucesfull");
-      }); 
+      });
     }
-  } else { 
+  } 
+alert("No localStorage");
+/*else { 
 alert("No localStorage set.");
     navigator.serviceWorker.register(swName, {
       scope: './'
@@ -76,7 +78,7 @@ alert(`New cache stored with ${localStorage.cacheTTL / 1000} seconds to live`);
     .catch(function(err) {
 alert(err);
     }); 
-  } 
+  } */
 };
 
 ff.cache.clean = function() {
