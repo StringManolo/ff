@@ -48,20 +48,19 @@ alert("Checking cache expiration time.");
   if (tl) {
 alert("Found cache expiration time\n" + JSON.parse(tl) / 1000 + " seconds"); 
 alert("Time left to expire cache:\n" + (new Date().getTime - JSON.parse(tl).getTime()) / 1000 + " seconds");
-/*
+
     const tl = JSON.parse(tl);
     const now = new Date();
-    if (now.getTime() > tl {
+    if (now.getTime() > tli) {
 alert("Cache Expired, setting new TTL")
       localStorage.removeItem(cacheTTL);
       caches.delete("cachev1").then(function() {
 alert("Cache deleted sucesfull");
       }); 
     }
-*/
   } 
 alert("No localStorage found but script still alive");
-   /* else { 
+    else { 
     navigator.serviceWorker.register(swName, {
       scope: './'
     })
@@ -78,7 +77,7 @@ alert(`New cache stored with ${localStorage.cacheTTL / 1000} seconds to live`);
     .catch(function(err) {
 alert(err);
     }); 
-  } */
+  } 
 };
 
 ff.cache.clean = function() {
