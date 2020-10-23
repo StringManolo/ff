@@ -251,7 +251,7 @@ ff.getUnknownTags();
   })
   ``` 
 
-  The second parameter 100000 in the previous example is the amount of time the files will be into browser cache. This means way faster file loads. When cache expires the browser will download again the files from the server so new ccontent will be cached. The value you should set here depends totally on how often you update content in your web and what files you chosed to cache.  
+  The second parameter 100000 in the previous example is the amount of time (in milliseconds) the files will be into browser cache. This means way faster file loads. When cache expires the browser will download again the files from the server so new ccontent will be cached. The value you should set here depends totally on how often you update content in your web and what files you chosed to cache.  
     
   You can test it live [here](https://bugs.stringmanolo.ga)  
 
