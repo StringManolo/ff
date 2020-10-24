@@ -8,21 +8,21 @@ ff.activateShortcuts();
 
 ff.defineShortcut("_", alert);
 
- /* _("Asking for permission"); */
+
+/*
   Notification.requestPermission(
   )
   .then(permission => {
-   /*  _(`Permission: ${permission}`); */
   
     if (permission) {
       if ('serviceWorker' in navigator) {
-      /* _("New Service worker..."); */
+
         navigator.serviceWorker.register('./serviceworker.js', {
           scope: './'
         })
         .then(function(reg) {
           window.swReg = reg;
-          /* _('registration succeed'); */
+          
         var i = 0;
           setInterval(() => {
 	    swReg.showNotification(++i + " xD", {
@@ -30,19 +30,19 @@ ff.defineShortcut("_", alert);
 	      icon: './notiIcon.png'
 	    })
             .then(ev => {
-              /* _(`ev = ${ev}`); */
+
             });
           }, 1000);
         }).catch(function(error) {
-         /* _('Registration failed with ' + error); */
+        
         });
       }
     }
   })
   .catch(error => {
-    /* _(error) */
+    
   })
-
+*/
 
 
 
@@ -89,12 +89,16 @@ var menuCsrf = `<h2>CSRF</h2>
 var four04 = `<h1>404</h1>
 The requested url was not found.`;
 
+var personalInfo = `<h6>Web Developer</h6>
+<h4>String Manolo</h4>
+<p>I am a self taught Cyber Security Enthusiast and a Software Developer. Currently focused on personal projects to improve my skills while searching for my first job. I love to fix security bugs and make secure and fast performance software, My favourite task is analice javascript code and security of small websites.</p>`;
+
 ff.routes = {
   route1: {
     name: "home",
     action: function() {
       $("myViews").innerHTML = ff.customTags.myMenu + home;
-      $("#nonCenter").innerHTML = "";
+      $("#nonCenter").innerHTML = personalInfo;
     }
   },
 
