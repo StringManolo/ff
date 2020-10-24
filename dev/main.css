@@ -112,6 +112,11 @@ myViews {
   text-align: center;
 }
 
+.halfCenter {
+  position: absolute;
+  left: 20%;
+}
+
 #xss a, #csrf a, .xss a, .csrf a {
   text-decoration: underline;
 }
