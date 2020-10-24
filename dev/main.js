@@ -239,7 +239,7 @@ ff.getUnknownTags();
 ff.getCustomTags();
 ff.getMustacheSintax();
 
-/*
+/* Cache is disable because this is a development version.
 ff.cache.resources = [
 "./logs/dev/historylogs.ff",
 "./blogEntries/xss/xss1.ff",
