@@ -135,7 +135,7 @@ ff.routes = {
       $("#nonCenter").innerHTML = `<a href="#projects">Projects</a>
       <a href="//github.com/stringmanolo">Github</a>
       <a href="//twitter.com/xsstringmanolo">Twitter</a>
-      <a href="//stringmanolo.ga">Webpage</a>`
+      <a href="//stringmanolo.ga">Webpage</a>` + personalInfo;
     }
   },
 
