@@ -89,10 +89,10 @@ var menuCsrf = `<h2>CSRF</h2>
 var four04 = `<h1>404</h1>
 The requested url was not found.`;
 
-var personalInfo = `<h6>Web Developer</h6>
+var personalInfo = `<div class="center"><h6>Web Developer</h6>
 <img src="./resources/yo.png" alt="personal photo">
-<h4>String Manolo</h4>
-<p>I am a self taught Cyber Security Enthusiast and a Software Developer. Currently focused on personal projects to improve my skills while searching for my first job. I love to fix security bugs and make secure and fast performance software, My favourite task is analice javascript code and security of small websites.</p>`;
+<h4>String Manolo</h4></div>
+<p>I am a self taught Cyber Security Enthusiast and a Software Developer. Born in Galicia - Spain. Currently focused on personal projects to improve my skills while searching for my first job. I love to fix security bugs and make secure and fast performance software, My favourite task is analice javascript code and security of small websites.</p>`;
 
 ff.routes = {
   route1: {
