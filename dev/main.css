@@ -114,7 +114,7 @@ myViews {
 
 .halfCenter {
   position: absolute;
-  left: 20%;
+  left: 5%;
 }
 
 #xss a, #csrf a, .xss a, .csrf a {
