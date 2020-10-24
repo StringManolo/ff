@@ -113,8 +113,11 @@ myViews {
 }
 
 .halfCenter {
-  position: absolute;
-  left: 5%;
+  margin: 0 3% 0 5%;
+}
+
+#aboutPhoto {
+  background-color: coral;
 }
 
 #xss a, #csrf a, .xss a, .csrf a {
