@@ -217,8 +217,8 @@ history-logs {
   }
 
   #aboutPhoto > img {
-    height: 22%;
-    width: 22%;
+    height: 25%;
+    width: 25%;
   }
   #aboutPhoto > h6 {
     margin: 2%;
@@ -228,6 +228,12 @@ history-logs {
 
   #aboutPhoto > h4 {
     margin: 1%;
+  }
+
+  .halfCentered {
+    margin-top: 2%;
+    font-size: 0.9em;
+    color: #333;
   }
 
 }
