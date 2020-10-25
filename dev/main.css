@@ -37,8 +37,19 @@ custom-tag1 {
 }
 
 history-logs {
+  margin-top: 3%;
   font-size: 20px;
   font-size: 2.6vw;
+}
+
+.ncIndicator {
+  font-size: 40px;
+  font-size: 3.4vw
+}
+
+.xssLink, .csrfLink {
+  font-size: 16px;
+  font-size: 2vw;
 }
 
 #mainMenu {

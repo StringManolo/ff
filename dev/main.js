@@ -78,12 +78,12 @@ Last changes!`;
 var about = `<h1>About!</h1>
 Know about <a href="#stringmanolo">String Manolo</a>.`;
 
-var menuXss = `<h2>XSS</h2>
+var menuXss = `<h2 class="ncIndicator">XSS</h2>
 <a class="xssLink" href="#writeups/xss/xss1">3 x 1!</a>
 <br />
 <a class="xssLink" href="#writeups/xss/w3schoolsxss1">Stored XSS - W3schools</a>`;
 
-var menuCsrf = `<h2>CSRF</h2>
+var menuCsrf = `<h2 class="ncIndicator">CSRF</h2>
 <a class="csrfLink" href="#writeups/csrf/w3schoolscsrf1">Logout CSRF - W3schools</a>`;
 
 var four04 = `<h1>404</h1>
