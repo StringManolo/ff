@@ -122,11 +122,17 @@ myViews {
 }
 
 #aboutPhoto > h6 {
-  padding-top: 12px; 
+  margin: 2%;
+  padding: 0;
+  padding-top: 10px; 
 }
 
 #aboutPhoto > h4 {
   padding-bottom: 12px;
+}
+
+#aboutPhoto > img {
+  margin-bottom: 1%;
 }
 
 #xss a, #csrf a, .xss a, .csrf a {
@@ -211,8 +217,8 @@ history-logs {
   }
 
   #aboutPhoto > img {
-    height: 16%;
-    width: 16%
+    height: 22%;
+    width: 22%;
   }
   #aboutPhoto > h6 {
     margin: 2%;
