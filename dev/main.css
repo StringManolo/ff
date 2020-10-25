@@ -137,7 +137,7 @@ myViews {
 #aboutPhoto > img {
   margin-bottom: 1%;
   height: auto;
-  width: 100%;
+  width: 50%;
 }
 
 #xss a, #csrf a, .xss a, .csrf a {
