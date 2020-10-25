@@ -26,3 +26,5 @@ The idea came up with the purpose of offering this feature to old Android device
 The project presents a problem that caused me to temporarily not continue with development. Files that exceed a few kilobytes (600KB +) cannot be processed due to browser limitations using raw js on DOM api. The option that I valued to be able to process large files is to use WebAssembler, in which I still do not have enough proficiency and that is why i did not continue development.</p>
 
 <iframe id="jexIframe" src="https://stringmanolo.ga/projects/jex/jex.html"></iframe>
+
+
