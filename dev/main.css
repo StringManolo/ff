@@ -118,7 +118,7 @@ myViews {
 
 #aboutPhoto {
   background-color: #00f3ff;
-  border-radius: 3% 3% 3% 3%;
+  border-radius: 1% 1% 1% 1%;
 }
 
 #aboutPhoto > h6 {
@@ -208,6 +208,11 @@ history-logs {
 
   .xss h4, .csrf h4 {
     font-size: 1.3em;
+  }
+
+  #aboutPhoto > img {
+    width: 80%;
+    height: 80%;
   }
 
 }
