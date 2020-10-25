@@ -1,6 +1,6 @@
 body {
   margin: 0 0 0 0;
-  padding: 4px 40px 4px 40px;
+  padding: 4px 5vw 4px 5vw;
   /*width: 1024px;
   height: 720px;*/
   text-size-adjust: none;
@@ -92,6 +92,7 @@ myViews {
 
 #nonCenter {
   font-size: 2em;
+  font-size: 4.5vw;
 }
 
 #nonCenter a {
@@ -109,6 +110,7 @@ myViews {
 
 #nonCenter > a {
   font-size: 0.75em;
+  font-size: 1.9vw;
 }
 
 .center {
@@ -186,6 +188,7 @@ myViews {
 
 history-logs {
   font-size: 0.7em;
+  font-size: 1.8vw;
 }
 
 .donotshow {
@@ -212,15 +215,18 @@ history-logs {
 
   .xss, .csrf {
     font-size: 0.9em;
+    font-size: 2.2vw;
   }
 
   .xss h1, .csrf h1 {
     font-size: 1.5em;
+    font-size: 3vw;
     font-family: arial;
   }
 
   .xss h4, .csrf h4 {
     font-size: 1.3em;
+    font-size: 2.7vw;
   }
 
   #aboutPhoto > img {
