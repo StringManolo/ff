@@ -119,6 +119,7 @@ myViews {
 #aboutPhoto {
   background-color: #00f3ff;
   border-radius: 1% 1% 1% 1%;
+  background-image: url("./resources/network.jpg");
 }
 
 #aboutPhoto > h6 {
