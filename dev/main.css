@@ -211,8 +211,8 @@ history-logs {
   }
 
   #aboutPhoto > img {
-    width: 80%;
-    height: 80%;
+    width: 300;
+    height: 300;
   }
 
 }
