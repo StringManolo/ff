@@ -121,6 +121,7 @@ myViews {
   border-radius: 1% 1% 1% 1%;
   background-image: url("./resources/network.jpg");
   object-fit: cover;
+  background-position: center;
 }
 
 #aboutPhoto > h6 {
