@@ -120,7 +120,7 @@ myViews {
   background-color: #00f3ff;
   border-radius: 1% 1% 1% 1%;
   background-image: url("./resources/network.jpg");
-  background-size: 80%;
+  object-fit: cover;
 }
 
 #aboutPhoto > h6 {
