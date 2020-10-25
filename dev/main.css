@@ -61,7 +61,7 @@ myViews {
   font-family: "Constantia", "Times New Roman", "Georgia", "Palatino", serif;
 }
 
-.xss p, .csrf p {
+.xss p, .csrf p, .halfCentered {
   color: #555;
   font-style: verdana, georgia, serif;
   -moz-osx-font-smoothing: grayscale;
@@ -217,8 +217,8 @@ history-logs {
   }
 
   #aboutPhoto > img {
-    height: 25%;
-    width: 25%;
+    height: 30%;
+    width: 30%;
   }
   #aboutPhoto > h6 {
     margin: 2%;
