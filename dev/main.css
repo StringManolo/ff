@@ -118,14 +118,15 @@ myViews {
 
 #aboutPhoto {
   background-color: #00f3ff;
+  border-radius: 3% 3% 3% 3%;
 }
 
 #aboutPhoto > h6 {
-  padding-top: 8px; 
+  padding-top: 12px; 
 }
 
 #aboutPhoto > h4 {
-  padding-bottom: 8px;
+  padding-bottom: 12px;
 }
 
 #xss a, #csrf a, .xss a, .csrf a {
