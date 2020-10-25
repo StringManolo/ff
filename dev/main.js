@@ -92,7 +92,7 @@ The requested url was not found.`;
 var personalInfo = `<div id="aboutPhoto" class="center"><h6>Web Developer</h6>
 <img src="./resources/yo.png" alt="personal photo">
 <h4>String Manolo</h4></div>
-<p class="halfCenter">I am a self taught Cyber Security Enthusiast and a Software Developer. Born in Galicia - Spain. Currently focused on personal projects to improve my skills while searching for my first job. I love to fix security bugs and make secure and fast performance software, My favourite task is analice javascript code and security of small websites.</p>`;
+<p class="halfCenter">I am a self taught Cyber Security Enthusiast and a Software Developer. Born in Galicia - Spain.<br />Currently focused on personal projects to improve my skills while searching for my first job.<br />I love to fix security bugs and make secure and fast performance software, My favourite task is analice javascript code and security of small websites.</p>`;
 
 ff.routes = {
   route1: {
