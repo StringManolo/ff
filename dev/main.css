@@ -47,11 +47,6 @@ history-logs {
   font-size: 3.4vw
 }
 
-.xssLink, .csrfLink {
-  font-size: 16px;
-  font-size: 2vw;
-}
-
 #mainMenu {
   font-size: 30px;
   font-size: 3.5vw;
@@ -97,7 +92,7 @@ myViews {
   word-wrap: break-word;
   padding: 1% 1% 1% 1%;
   margin: 4% 3% 5% 4%;
-  height: 600px;
+  height: auto;
   overflow-y: scroll;
   border: solid 3px #000;
 }
@@ -125,8 +120,12 @@ myViews {
 }
 
 #nonCenter > a {
-  font-size: 0.75em;
-  font-size: 1.9vw;
+  font-size: 1.2em;
+  font-size: 2.6vw;
+  padding-top: 0;
+  padding-bottom: 0;
+  margin-bottom: 0;
+  margin-top: 0;
 }
 
 .center {
