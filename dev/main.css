@@ -215,12 +215,13 @@ history-logs {
     width: 16%
   }
   #aboutPhoto > h6 {
-    padding: 0;
+    margin: 2%;
+    padding: 2%;
 
   }
 
   #aboutPhoto > h4 {
-    margin: 0;
+    margin: 1%;
   }
 
 }
