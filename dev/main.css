@@ -117,7 +117,7 @@ myViews {
 }
 
 #aboutPhoto {
-  background-color: coral;
+  background-color: #00f3ff;
 }
 
 #xss a, #csrf a, .xss a, .csrf a {
