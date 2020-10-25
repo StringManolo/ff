@@ -122,8 +122,6 @@ myViews {
   background-image: url("./resources/network.jpg");
   object-fit: fill;
   background-position: center;
-  height: auto;
-  width: 100%;
 }
 
 #aboutPhoto > h6 {
@@ -138,6 +136,8 @@ myViews {
 
 #aboutPhoto > img {
   margin-bottom: 1%;
+  height: auto;
+  width: 100%;
 }
 
 #xss a, #csrf a, .xss a, .csrf a {
