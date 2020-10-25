@@ -120,8 +120,10 @@ myViews {
   background-color: #00f3ff;
   border-radius: 1% 1% 1% 1%;
   background-image: url("./resources/network.jpg");
-  object-fit: cover;
+  object-fit: fill;
   background-position: center;
+  height: auto;
+  width: 100%;
 }
 
 #aboutPhoto > h6 {
@@ -220,7 +222,7 @@ history-logs {
   }
 
   #aboutPhoto > img {
-    height: 30%;
+    height: auto;
     width: 30%;
   }
   #aboutPhoto > h6 {
