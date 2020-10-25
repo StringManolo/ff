@@ -210,8 +210,9 @@ history-logs {
     font-size: 1.3em;
   }
 
-  #aboutPhoto {
-    height: 2%;
+  #aboutPhoto > img {
+    height: 8%;
+    width: 8%
   }
   #aboutPhoto > img {
     
