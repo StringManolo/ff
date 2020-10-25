@@ -211,11 +211,12 @@ history-logs {
   }
 
   #aboutPhoto > img {
-    height: 8%;
-    width: 8%
+    height: 16%;
+    width: 16%
   }
-  #aboutPhoto > img {
-    
+  #aboutPhoto > h4, #aboutPhoto > h6 {
+    margin: 0;
+    padding: 0;
   }
 
 }
