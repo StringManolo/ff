@@ -120,6 +120,14 @@ myViews {
   background-color: #00f3ff;
 }
 
+#aboutPhoto > h6 {
+  padding-top: 8px; 
+}
+
+#aboutPhoto > h4 {
+  padding-bottom: 8px;
+}
+
 #xss a, #csrf a, .xss a, .csrf a {
   text-decoration: underline;
 }
