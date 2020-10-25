@@ -38,21 +38,23 @@ custom-tag1 {
 
 #mainMenu {
   font-size: 30px;
+  font-size: 3.5vw;
 }
 
 #mainMenu a {
   margin: 0 20px 0 20px;
-  font-size: 1.1em;
 }
 
 myViews {
   /*width: 1024px;
   height: 720px;*/
   font-size: 25px;
+  font-size: 2.7vw;
 }
 
 .xss, .csrf {
   font-size: 2em;
+  font-size: 4.5vw;
   text-align: left;
   width: 100%;
   padding: 2% 0 2% 1%;
@@ -70,7 +72,8 @@ myViews {
   text-rendering: optimizelegibility !important;
   letter-spacing: .05em;
   line-height: 1.5em;
-  font-size: 0.8em; 
+  font-size: 0.8em;
+  font-size: 2.9vw;
 }
 
 .xssReport, .csrfReport {
@@ -117,7 +120,6 @@ myViews {
 }
 
 #aboutPhoto {
-  background-color: #00f3ff;
   border-radius: 1% 1% 1% 1%;
   background-image: url("./resources/network.jpg");
   object-fit: fill;
