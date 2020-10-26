@@ -98,6 +98,20 @@ var homeLinks = `<div class="externalLinks">
 
 </div>`;
 
+var landingPage = `<section id="landingPage">
+<header></header>
+<h1>Learn Security</h1>
+<p>Get updates from String Manolo Security Research to help you protect software from new and popular threats.</p>
+<ul>
+<li>Security Bugs</li>
+<li>Research</li>
+<li>Pappers</li>
+<li>Tutorials</li>
+<li>Tools</li>
+<li>Development</li>
+</ul>
+</section>`;
+
 ff.routes = {
   route1: {
     name: "home",
@@ -219,7 +233,15 @@ ff.routes = {
     }
   },
 
-  amount: 13,
+  route14: {
+    name: "landing",
+    action: function() {
+      $("myViews").innerHTML = ff.customTags.myMenu;
+      $("#nonCenter").innerHTML = landingPage;
+    }
+  },
+ 
+  amount: 14,
 
   routeDefault: {
     name: "default",

@@ -32,14 +32,11 @@ myViews a:active {
   color: #fff;
 }
 
-custom-tag1 {
-  color: red;
-}
-
 history-logs {
   margin-top: 3%;
+  margin-left: 5%;
   font-size: 20px;
-  font-size: 2.6vw;
+  font-size: 2.5vw;
 }
 
 .ncIndicator {
@@ -205,11 +202,6 @@ myViews {
   width: 80%;
 }
 
-history-logs {
-  font-size: 0.7em;
-  font-size: 1.8vw;
-}
-
 .donotshow {
   position: absolute;
   left: -9999px;
@@ -300,3 +292,4 @@ history-logs {
   display: block;
 }
 */
+

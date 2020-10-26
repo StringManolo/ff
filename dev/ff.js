@@ -96,6 +96,9 @@ function detectInitialUrl() {
     if (!routeFound) {
     (ff.routes.routeDefault.action)();
     }
+  } else {
+    window.location = window.location + "#landing";
+    detectInitialUrl();
   }
 }
 
