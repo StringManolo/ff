@@ -216,6 +216,7 @@ myViews {
   border-radius: 2% 2% 2% 2%;
   background-image: url("./resources/cybersecurity.jpg");
   background-position: center;
+  background-size: cover;
 }
 
 @media (min-width: 0px) and (orientation:landscape) {
@@ -274,6 +275,7 @@ myViews {
     background-image: url("./resources/computer.jpg");
     height: 25vw;
     width: 90vw;
+    background-size: cover;
   }
   
   #landingPage {
