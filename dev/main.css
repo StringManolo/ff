@@ -4,7 +4,7 @@ body {
   /*width: 1024px;
   height: 720px;*/
   text-size-adjust: none;
-  background-color: snow;
+  background-color: #fffefe;
   text-rendering: optimizeLegibility;
 }
 
@@ -217,6 +217,15 @@ history-logs {
   height: 1px;
 }
 
+#landingPage > header {
+  height: 70vw;
+  width: 90vw;
+  border: solid 1px #000;
+  border-radius: 2% 2% 2% 2%;
+  background-image: url("./resources/cybersecurity.jpg");
+  background-position: center;
+}
+
 @media (min-width: 0px) and (orientation:landscape) {
 
   #w3schoolsImagePortrait {
@@ -269,5 +278,25 @@ history-logs {
     color: #555;
   }
 
+  #landingPage > header {
+    background-image: url("./resources/computer.jpg");
+    height: 25vw;
+    width: 90vw;
+  }
+  
+  #landingPage {
+    text-align: center;
+  }
+
+  #landingPage > h1 {
+    font-size: 2em;
+    font-size: 4vw;
+  }
+
 }
 
+/* Show later 
+.showlater {
+  display: block;
+}
+*/

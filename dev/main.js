@@ -94,6 +94,10 @@ var personalInfo = `<div id="aboutPhoto" class="center"><h6>Web Developer</h6>
 <h4>String Manolo</h4></div>
 <p class="halfCenter">I am a self taught Cyber Security Enthusiast and a Software Developer. Born in Galicia - Spain.<br /><br />Currently focused on personal projects to improve my skills while searching for my first job.<br /><br />I love to fix security bugs and make secure and fast performance software,<br /><br />My favourite task is analice javascript code and security of small websites.</p>`;
 
+var homeLinks = `<div class="externalLinks">
+
+</div>`;
+
 ff.routes = {
   route1: {
     name: "home",

@@ -1,1 +1,0 @@
-- Testkng if change from .ff extension to .ff.js make files stay in browser caché. This will heavily improve the downloading times and the offline exoerience.
