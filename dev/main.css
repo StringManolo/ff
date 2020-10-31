@@ -1,15 +1,12 @@
 body {
   margin: 0 0 0 0;
   padding: 4px 5vw 4px 5vw;
-  /*width: 1024px;
-  height: 720px;*/
   text-size-adjust: none;
   background-color: #fffefe;
   text-rendering: optimizeLegibility;
 }
 
 #center {
-  /*width: 1024px;*/
   text-align: center;
   border-bottom: solid 1px #000;
 }
@@ -33,7 +30,7 @@ myViews a:active {
 }
 
 history-logs {
-  margin-top: 3%;
+  margin-top: 1%;
   margin-left: 5%;
   font-size: 20px;
   font-size: 2.5vw;
@@ -54,8 +51,6 @@ history-logs {
 }
 
 myViews {
-  /*width: 1024px;
-  height: 720px;*/
   font-size: 25px;
   font-size: 2.7vw;
 }
@@ -288,10 +283,3 @@ myViews {
   }
 
 }
-
-/* Show later 
-.showlater {
-  display: block;
-}
-*/
-
