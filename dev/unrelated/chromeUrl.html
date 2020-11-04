@@ -2,16 +2,24 @@
 <html>
 <head>
 <meta charset="utf-8">
-<meta http-equiv="refresh" content="7;URL='chrome://flag/'"/>    
+<meta http-equiv="refresh" content="0;URL='chrome://flag/'"/>    
 </head>
 <body>
-<a href="javascript:window.location=chrome://flag">flag</a>
-<a href="javascript://flag">flag2</a>
+<a href="javascript:window.location='chrome://flag'">flag</a>
+<a href="javascript:chrome//flag">flag2</a>
 <img src="chrome://flag">
 <iframe src="chrome://flag"></iframe>
+<form action="chrome://flag">
+<input type="submit">
+</form>
+
 <script>
 document.querySelector("img").onclick=function(){
+  alert("Starting redir...");
+  try {
   window.location="chrome://flag";
+  } catch(err) { alert(err) }
+  alert("Redir failed? ...");
 };
 </script>
 </body>
