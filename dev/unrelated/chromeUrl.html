@@ -9,7 +9,8 @@
 <a href="javascript:chrome//flag">flag2</a>
 <img src="chrome://flag">
 <iframe src="chrome://flag"></iframe>
-<form action="chrome://flag">
+<form action="chrome://flag" method="post" name="xD">
+<input type="hidden" value="xD" name="test">
 <input type="submit">
 </form>
 
@@ -20,6 +21,9 @@ document.querySelector("img").onclick=function(){
   window.location="chrome://flag";
   } catch(err) { alert(err) }
   alert("Redir failed? ...");
+  alert("Trying form submit...");
+  setTimeout(xD.submit());
+  alert("Unlucky");
 };
 </script>
 </body>
