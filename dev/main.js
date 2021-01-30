@@ -5,10 +5,6 @@ import ff from "./ff.js";
 ff.activateShortcuts();
 
 
-
-ff.defineShortcut("_", alert);
-
-
 /*
   Notification.requestPermission(
   )
@@ -254,6 +250,7 @@ ff.routes = {
 
 ff.router.start();
 
+
 ff.mustache.copyright = `<div class="copyright">&copy; ${new Date().getFullYear()}</div>
 <style>
 .copyright {
@@ -269,6 +266,7 @@ ff.mustache.date = ""+new Date();
 ff.getUnknownTags();
 ff.getCustomTags();
 ff.getMustacheSintax();
+
 
 /* Cache is disable because this is a development version.
 ff.cache.resources = [
